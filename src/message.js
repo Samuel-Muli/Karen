@@ -1,41 +1,3 @@
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
-//                                                                                                      //
-//                                    𝗫𝗟𝗜𝗖𝗢𝗡-𝗩𝟰-𝗠𝗗  𝐁𝐎𝐓                                                //
-//                                                                                                      //
-//                                         Ｖ：4.0                                                       //
-//                                                                                                      //
-//                                                                                                      //      
-//               ██╗  ██╗██╗     ██╗ ██████╗ ██████╗ ███╗   ██╗      ██╗   ██╗██╗  ██╗                  //              
-//                ██╗██╔╝██║     ██║██╔════╝██╔═══██╗████╗  ██║      ██║   ██║██║  ██║                  //
-//                ╚███╔╝ ██║     ██║██║     ██║   ██║██╔██╗ ██║█████╗██║   ██║███████║                  // 
-//                ██╔██╗ ██║     ██║██║     ██║   ██║██║╚██╗██║╚════╝╚██╗ ██╔╝╚════██║                  // 
-//               ██╔╝ ██╗███████╗██║╚██████╗╚██████╔╝██║ ╚████║       ╚████╔╝      ██║                  //
-//                ═╝  ╚═╝╚══════╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝        ╚═══╝       ╚═╝                  // 
-//                                                                                                      //
-//                                                                                                      //
-//                                                                                                      //
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
-//*
-//  * @project_name : XLICON-V4-MD
-//  * @author : salmanytofficial
-//  * @youtube : https://www.youtube.com/@s4salmanyt
-//  * @description : XLICON-V4 ,A Multi-functional whatsapp user bot.
-//*
-//*
-//base by DGXeon
-//re-upload? recode? copy code? give credit ya :)
-//Instagram: ahmmikun
-//Telegram: t.me/ahmmitech
-//GitHub: @salmanytofficial
-//WhatsApp: +923184070915
-//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@DGXeon
-//   * Created By Github: DGXeon.
-//   * Credit To Xeon
-//   * © 2024 XLICON-V3-MD.
-// ⛥┌┤
-// */
-
-
 require('../settings');
 const fs = require('fs');
 const path = require('path');
@@ -155,8 +117,8 @@ async function GroupParticipantsUpdate(XliconBotInc, { id, participants, action 
                 XliconLft = await getBuffer(profile)
 				if (action == 'add') {
 				let xliconName = n
-                const xdate = moment.tz('Asia/Kolkata').locale('en-IN').format('DD/MM/YYYY');
-                const xtime = moment().tz('Asia/Kolkata').locale('en-IN').format('HH:mm:ss');
+                const xdate = moment.tz('Africa/Nairobi').locale('en-IN').format('DD/MM/YYYY');
+                const xtime = moment().tz('Africa/Nairobi').locale('en-IN').format('HH:mm:ss');
 	            const xmembers = metadata.participants.length
                 xliconbody = `
 ┌─❖
@@ -169,8 +131,8 @@ async function GroupParticipantsUpdate(XliconBotInc, { id, participants, action 
  ◎      ${xmembers}th 
  │ ➪  *Jᴏɪɴᴇᴅ :*
  ◎      ${xtime} ${xdate}
- │ ➪  *Support by Subscribe My Channel :*
- ◎      youtube.com/@s4salmanyt
+ │ ➪  *Visit My Website :*
+ ◎      https://muli-samuel.onrender.com
  └─────────────|`
 let msgs = generateWAMessageFromContent(id, {
   viewOnceMessage: {
@@ -201,7 +163,7 @@ let msgs = generateWAMessageFromContent(id, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363222395675670@newsletter',
+                  newsletterJid: '254705244235@newsletter',
                   newsletterName: ownername,
                   serverMessageId: 143
                 }
@@ -213,8 +175,8 @@ let msgs = generateWAMessageFromContent(id, {
 await XliconBotInc.relayMessage(id, msgs.message, {})
 				} else if (action == 'remove') {
 				let xliconName = n
-                const xlicondate = moment.tz('Asia/Kolkata').locale('en-IN').format('DD/MM/YYYY');
-                const xlicontime = moment().tz('Asia/Kolkata').locale('en-IN').format('HH:mm:ss');
+                const xlicondate = moment.tz('Africa/Nairobi').locale('en-IN').format('DD/MM/YYYY');
+                const xlicontime = moment().tz('Africa/Nairobi').locale('en-IN').format('HH:mm:ss');
 	            const xliconmembers = metadata.participants.length
 					xliconbody = `
 ┌─❖
@@ -227,8 +189,8 @@ await XliconBotInc.relayMessage(id, msgs.message, {})
  ◎      ${xeonmembers}th
  │ ➪  *Tɪᴍᴇ :*
  ◎      ${xlicontime} ${xlicondate}
- │ ➪  *Support by Subscribe My Channel :*
- ◎      youtube.com/@s4salmanyt
+ │ ➪  *Visit My Website :*
+ ◎      https://muli-samuel.onrender.com
  └─────────────||
 `
 let msgs = generateWAMessageFromContent(id, {
@@ -260,7 +222,7 @@ let msgs = generateWAMessageFromContent(id, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363222395675670@newsletter',
+                  newsletterJid: '254705244235@newsletter',
                   newsletterName: ownername,
                   serverMessageId: 143
                 }
@@ -271,8 +233,8 @@ let msgs = generateWAMessageFromContent(id, {
 }, {})
 await XliconBotInc.relayMessage(id, msgs.message, {})
 				} else if (action == 'promote') {
-const xlicontime = moment().tz('Asia/Kolkata').locale('en-IN').format('HH:mm:ss');
-const xlicondate = moment.tz('Asia/Kolkata').locale('en-IN').format('DD/MM/YYYY');
+const xlicontime = moment().tz('Africa/Nairobi').locale('en-IN').format('HH:mm:ss');
+const xlicondate = moment.tz('Africa/Nairobi').locale('en-IN').format('DD/MM/YYYY');
 let xliconName = n
 xliconbody = ` 𝗖𝗼𝗻𝗴𝗿𝗮𝘁🎉 @${xliconName.split("@")[0]}, you have been *promoted* to *admin* 🥳`
    await XliconBotInc.sendMessage(id,
@@ -288,8 +250,8 @@ xliconbody = ` 𝗖𝗼𝗻𝗴𝗿𝗮𝘁🎉 @${xliconName.split("@")[0]}, yo
 "thumbnail": XliconWlcm,
 "sourceUrl": `${wagc}`}}})
 				} else if (action == 'demote') {
-const xlicontime = moment().tz('Asia/Kolkata').locale('en-IN').format('HH:mm:ss');
-const xlicondate = moment.tz('Asia/Kolkata').locale('en-IN').format('DD/MM/YYYY');
+const xlicontime = moment().tz('Africa/Nairobi').locale('en-IN').format('HH:mm:ss');
+const xlicondate = moment.tz('Africa/Nairobi').locale('en-IN').format('DD/MM/YYYY');
 let xliconName = n
 xliconbody = `𝗢𝗼𝗽𝘀‼️ @${xliconName.split("@")[0]}, you have been *demoted* from *admin* 😬`
 await XliconBotInc.sendMessage(id,
@@ -855,7 +817,7 @@ return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net'
 							forwardingScore: 10,
 							isForwarded: true,
 							forwardedNewsletterMessageInfo: {
-								newsletterJid: '120363232303807350@newsletter', // Ensure global.my and global.my.ch are defined
+								newsletterJid: '254705244235@newsletter', // Ensure global.my and global.my.ch are defined
 								serverMessageId: null,
 								newsletterName: ownername
 							},

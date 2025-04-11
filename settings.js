@@ -30,7 +30,7 @@ global.wagc = process.env.WHATSAPP_CHANNEL || "https://whatsapp.com/channel/0029
 //~~~~~~~~<Theme and Miscellaneous>~~~~~~~~~~\\
 global.themeemoji = process.env.THEME_EMOJI || '⛩';
 
-lobal.wm = process.env.WATERMARK || "꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂";
+global.wm = process.env.WATERMARK || "꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂";
 
 global.botscript = process.env.SCRIPT_LINK || 'https://github.com/Samuel-Muli/Karen';
 

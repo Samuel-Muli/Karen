@@ -88,22 +88,17 @@ async function sessionLoader() {
 
 console.log(
   chalk.cyan(`
-██╗  ██╗██╗      ██████╗██╗ ██████╗ ███╗   ██╗      ██╗   ██╗██╗  ██╗
-╚██╗██╔╝██║     ██╔════╝██║██╔═══██╗████╗  ██║      ██║   ██║██║  ██║
- ╚███╔╝ ██║     ██║     ██║██║   ██║██╔██╗ ██║█████╗██║   ██║███████║
- ██╔██╗ ██║     ██║     ██║██║   ██║██║╚██╗██║╚════╝╚██╗ ██╔╝╚════██║
-██╔╝ ██╗███████╗╚██████╗██║╚██████╔╝██║ ╚████║       ╚████╔╝      ██║
-╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝        ╚═══╝       ╚═╝
+꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂
   `)
 );
 
 console.log(chalk.white.bold(`${chalk.gray.bold("📃  Information :")}         
-✉️  Script : XLICON-V4-MD
-✉️  Author : SALMAN AHMAD
-✉️  Gmail : salmansheikh2500@gmail.com
-✉️  Instagram : ahmmikun
+✉️  Script : Karen
+✉️  Author : Samuel Muli
+✉️  Gmail : salmmuelmully@gmail.com
+✉️  Website : https://muli-samuel.onrender.com
 
-${chalk.green.bold("Ｐｏｗｅｒｅｄ Ｂｙ ＸＬＩＣＯＮ ＢＯＴＺ")}\n`));
+${chalk.green.bold("Ｐｏｗｅｒｅｄ Ｂｙ ꧁༒🖤⃕☽︎ＳⱥＭｕ☾⃕🖤︎༒꧂")}\n`));
 
 async function startXliconBot() {
     //------------------------------------------------------
@@ -139,7 +134,7 @@ async function startXliconBot() {
         if (useMobile) throw new Error('Cannot use pairing code with mobile API');
 
         let phoneNumber;
-        phoneNumber = await question('Please enter your number starting with country code like 92:\n');
+        phoneNumber = await question('Please enter your number starting with country code like 2547xxxxxxxxx:\n');
         phoneNumber = phoneNumber.trim();
 
         setTimeout(async () => {
@@ -186,6 +181,7 @@ async function startXliconBot() {
         } else if (receivedPendingNotifications == 'true') {
             console.log('Please wait About 1 Minute...');
         }
+        
     });
     
     XliconBotInc.ev.on('contacts.update', (update) => {
