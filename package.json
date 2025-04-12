@@ -1,6 +1,6 @@
 {
   "name": "꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "Bot WhatsApp Using Lib Baileys Multi Device",
   "main": "start.js",
   "type": "commonjs",
@@ -8,7 +8,7 @@
     "start": "node start.js"
   },
   "keywords": [
-    "Whatsapp Bot By Samuel"
+    "Whatsapp Bot By Salman Ahmad"
   ],
   "author": "Samuel Muli",
   "license": "MIT",

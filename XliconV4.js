@@ -1,3 +1,41 @@
+
+//══════════════════════════════════════════════════════════════════════════════════════════════════════//
+//                                                                                                      //
+//                                    𝗫𝗟𝗜𝗖𝗢f𝗡-𝗩𝟰-𝗠𝗗  𝐁𝐎𝐓                                               //
+//                                                                                                      //
+//                                         Ｖ：4.0                                                       //
+//                                                                                                      //
+//                                                                                                      //      
+//               ██╗  ██╗██╗     ██╗ ██████╗ ██████╗ ███╗   ██╗      ██╗   ██╗██╗  ██╗                  //              
+//                ██╗██╔╝██║     ██║██╔════╝██╔═══██╗████╗  ██║      ██║   ██║██║  ██║                  //
+//                ╚███╔╝ ██║     ██║██║     ██║   ██║██╔██╗ ██║█████╗██║   ██║███████║                  // 
+//                ██╔██╗ ██║     ██║██║     ██║   ██║██║╚██╗██║╚════╝╚██╗ ██╔╝╚════██║                  // 
+//               ██╔╝ ██╗███████╗██║╚██████╗╚██████╔╝██║ ╚████║       ╚████╔╝      ██║                  //
+//                ═╝  ╚═╝╚══════╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝        ╚═══╝       ╚═╝                  // 
+//                                                                                                      //
+//                                                                                                      //
+//                                                                                                      //
+//══════════════════════════════════════════════════════════════════════════════════════════════════════//
+/**
+ * XLICON-V4-MD BOT
+ * 
+ * @project_name XLICON-V4-MD
+ * @version 4.0
+ * @description XLICON-V4, A Multi-functional WhatsApp user bot.
+ * @base DGXeon
+ * @re-upload recode copy code give credit ya :)
+ * @author salmanytofficial
+ * @youtube https://www.youtube.com/@s4salmanyt
+ * @instagram ahmmikun
+ * @telegram t.me/ahmmitech
+ * @github @salmanytofficial
+ * @whatsapp +923184070915
+ * @created_by DGXeon
+ * @credit_to Xeon
+ * @copyright © 2024 XLICON-V3-MD
+ */
+
+
 //CODE TO HANDLE ERRORS
 process.on('unhandledRejection', console.error);
 process.on('uncaughtException', console.error);
@@ -5,8 +43,8 @@ process.setMaxListeners(500);
 //---------------------------------------------------------------------------------------------------------------------------//
 
 //MODULE EXPOERTS AND REQUIREMENTS 
-require('./settings');
-require('./lib/fetch');
+require('./settings.js');
+require('./lib/fetch.js');
 const fs = require('fs');
 const os = require('os');
 const util = require('util');
@@ -33,9 +71,9 @@ const PDFDocument = require("pdfkit");
 const more = String.fromCharCode(8206);
 const readmore = more.repeat(4001);
 const fsx = require('fs-extra');
-const scp2 = require('./lib/scraper2');
-const { fetchChapterPages, searchManga } = require('./lib/mangadl');
-const { uploadMedia, handleMediaUpload } = require('./lib/catbox'); 
+const scp2 = require('./lib/scraper2.js');
+const { fetchChapterPages, searchManga } = require('./lib/mangadl.js');
+const { uploadMedia, handleMediaUpload } = require('./lib/catbox.js'); 
 const jsobfus = require('javascript-obfuscator');
 const {translate} = require('@vitalets/google-translate-api');
 const { randomBytes } = require('crypto')
@@ -48,25 +86,25 @@ let bad = JSON.parse(fs.readFileSync('./src/badword.json'))
 //---------------------------------------------------------------------------------------------------------------------------//
 
 //media
-const VoiceNoteXlicon = JSON.parse(fs.readFileSync('./Karen/database/xliconvn.json'));
-const StickerXlicon = JSON.parse(fs.readFileSync('./Karen/database/xliconsticker.json'));
-const ImageXlicon = JSON.parse(fs.readFileSync('./Karen/database/xliconimage.json'));
-const VideoXlicon = JSON.parse(fs.readFileSync('./Karen/database/xliconvideo.json'));
-const DocXlicon = JSON.parse(fs.readFileSync('./Karen/database/doc.json'));
-const ZipXlicon = JSON.parse(fs.readFileSync('./Karen/database/zip.json'));
-const ApkXlicon = JSON.parse(fs.readFileSync('./Karen/database/apk.json'));
+const VoiceNoteXlicon = JSON.parse(fs.readFileSync('./XliconMedia/database/xliconvn.json'));
+const StickerXlicon = JSON.parse(fs.readFileSync('./XliconMedia/database/xliconsticker.json'));
+const ImageXlicon = JSON.parse(fs.readFileSync('./XliconMedia/database/xliconimage.json'));
+const VideoXlicon = JSON.parse(fs.readFileSync('./XliconMedia/database/xliconvideo.json'));
+const DocXlicon = JSON.parse(fs.readFileSync('./XliconMedia/database/doc.json'));
+const ZipXlicon = JSON.parse(fs.readFileSync('./XliconMedia/database/zip.json'));
+const ApkXlicon = JSON.parse(fs.readFileSync('./XliconMedia/database/apk.json'));
 //---------------------------------------------------------------------------------------------------------------------------//
 
 
 //Permission Check Function
-const prem = require('./src/premium');
+const prem = require('./src/premium.js');
 const owner = JSON.parse(fs.readFileSync('./src/owner.json'));
 //---------------------------------------------------------------------------------------------------------------------------//
 
 
 //Uploader & Converter Function
-const { TelegraPh, UploadFileUgu } = require('./lib/uploader');
-const uploadImage = require('./lib/uploadImage');
+const { TelegraPh, UploadFileUgu } = require('./lib/uploader.js');
+const uploadImage = require('./lib/uploadImage.js');
 const {
     toAudio,
     toPTT,
@@ -76,7 +114,7 @@ const {
   Telesticker,
   formatBytes,
   formatDuration
-} = require('./lib/converter');
+} = require('./lib/converter.js');
 const { 
 addResponList, 
 delResponList, 
@@ -85,17 +123,17 @@ isAlreadyResponListGroup,
 sendResponList, 
 updateResponList, 
 getDataResponList 
-} = require('./lib/list');
+} = require('./lib/list.js');
 //---------------------------------------------------------------------------------------------------------------------------//
 
 
 //Modules Function
 const { xvideosSearch, xvideosdl, xnxxdl, xnxxSearch} = require('./lib/scraper3.js');
-const { imageToWebp, videoToWebp, writeExif, writeExifImg, writeExifVid } = require('./lib/exif');
-const { chatGpt, tiktokDl, ytMp4, ytMp3 } = require('./lib/screaper');
-const { gameSlot, gameCasinoSolo, gameMerampok, gameTangkapOr, daily, transferLimit, transferUang, buy, setLimit, setUang } = require('./lib/game');
-const { pinterest, wallpaper, wikimedia, quotesAnime, happymod, umma, ringtone, jadwalsholat, styletext } = require('./lib/scraper');
-const { formatp, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, webApi, parseMention, generateProfilePicture, getRandom, getGroupAdmins, readFileTxt, readFileJson, getHashedPassword, generateAuthToken, generateToken, batasiTeks, randomText, isEmoji, getAllHTML, fetchBuffer, GIFBufferToVideoBuffer } = require('./lib/function');
+const { imageToWebp, videoToWebp, writeExif, writeExifImg, writeExifVid } = require('./lib/exif.js');
+const { chatGpt, tiktokDl, ytMp4, ytMp3 } = require('./lib/screaper.js');
+const { gameSlot, gameCasinoSolo, gameMerampok, gameTangkapOr, daily, transferLimit, transferUang, buy, setLimit, setUang } = require('./lib/game.js');
+const { pinterest, wallpaper, wikimedia, quotesAnime, happymod, umma, ringtone, jadwalsholat, styletext } = require('./lib/scraper.js');
+const { formatp, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, webApi, parseMention, generateProfilePicture, getRandom, getGroupAdmins, readFileTxt, readFileJson, getHashedPassword, generateAuthToken, generateToken, batasiTeks, randomText, isEmoji, getAllHTML, fetchBuffer, GIFBufferToVideoBuffer } = require('./lib/function.js');
 //---------------------------------------------------------------------------------------------------------------------------//
 
 // Read Database
@@ -277,7 +315,7 @@ const isQuotedDocument = type === 'extendedTextMessage';
                   if (!('antidocument' in group)) group.antidocument = false
                   if (!('antilink' in group)) group.antilink = false
                   if (!('antipromotion' in group)) group.antipromotion = false
-                  if (!('antidelete' in group)) group.antidelete = true
+                  if (!('antidelete' in group)) group.antidelete = false
                   if (!('antiemoji' in group)) group.antiemoji = false 
 			} else {
 				global.db.groups[m.chat] = {
@@ -368,7 +406,7 @@ const isQuotedDocument = type === 'extendedTextMessage';
 			}
 		}, {
 			scheduled: true,
-			timezone: 'Africa/Nairobi'
+			timezone: 'Asia/Karachi'
 		})
 		
 		if (!XliconBotInc.public) {
@@ -495,7 +533,7 @@ const isQuotedDocument = type === 'extendedTextMessage';
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '254705244235@newsletter',//newsletterJid: '120363232303807350@newsletter',
+                  newsletterJid: '120363232303807350@newsletter',
                   newsletterName: ownername,
                   serverMessageId: 143
                 }
@@ -1242,7 +1280,7 @@ if (global.db.users[m.sender].afkTime > -1) {
                             title: botname,
                             body: ownername,
                             previewType: "PHOTO",
-                            thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+                            thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
                             sourceUrl: wagc
                         }
                     },
@@ -1259,7 +1297,7 @@ if (global.db.users[m.sender].afkTime > -1) {
                         showAdAttribution: true,
                         title: botname,
                         body: ownername,
-                        thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+                        thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
                         sourceUrl: websitex,
                         mediaType: 1,
                         renderLargerThumbnail: true
@@ -1280,8 +1318,8 @@ contextInfo: {
 forwardingScore: 999,
 isForwarded: true,
 forwardedNewsletterMessageInfo: {
-newsletterName: "Its Me Again",
-newsletterJid: "254705244235@newsletter",
+newsletterName: "Click here to get $69",
+newsletterJid: "120363232303807350@newsletter",
 },
 externalAdReply: {  
 showAdAttribution: true,
@@ -1319,27 +1357,27 @@ quoted: m,
 
 //theme sticker reply
         const XliconStickWait = () => {
-        let XliconStikRep = fs.readFileSync('./Karen/theme/sticker_reply/wait.webp')
+        let XliconStikRep = fs.readFileSync('./XliconMedia/theme/sticker_reply/wait.webp')
         XliconBotInc.sendMessage(m.chat, { sticker: XliconStikRep }, { quoted: m })
         }
         const XliconStickAdmin = () => {
-        let XliconStikRep = fs.readFileSync('./Karen/theme/sticker_reply/admin.webp')
+        let XliconStikRep = fs.readFileSync('./XliconMedia/theme/sticker_reply/admin.webp')
         XliconBotInc.sendMessage(m.chat, { sticker: XliconStikRep }, { quoted: m })
         }
         const XliconStickBotAdmin = () => {
-        let XliconStikRep = fs.readFileSync('./Karen/theme/sticker_reply/botadmin.webp')
+        let XliconStikRep = fs.readFileSync('./XliconMedia/theme/sticker_reply/botadmin.webp')
         XliconBotInc.sendMessage(m.chat, { sticker: XliconStikRep }, { quoted: m })
         }
         const XliconStickOwner = () => {
-        let XliconStikRep = fs.readFileSync('./Karen/theme/sticker_reply/owner.webp')
+        let XliconStikRep = fs.readFileSync('./XliconMedia/theme/sticker_reply/owner.webp')
         XliconBotInc.sendMessage(m.chat, { sticker: XliconStikRep }, { quoted: m })
         }
         const XliconStickGroup = () => {
-        let XliconStikRep = fs.readFileSync('./Karen/theme/sticker_reply/group.webp')
+        let XliconStikRep = fs.readFileSync('./XliconMedia/theme/sticker_reply/group.webp')
         XliconBotInc.sendMessage(m.chat, { sticker: XliconStikRep }, { quoted: m })
         }
         const XliconStickPrivate = () => {
-        let XliconStikRep = fs.readFileSync('./Karen/theme/sticker_reply/private.webp')
+        let XliconStikRep = fs.readFileSync('./XliconMedia/theme/sticker_reply/private.webp')
         XliconBotInc.sendMessage(m.chat, { sticker: XliconStikRep }, { quoted: m })
         }
   
@@ -1348,10 +1386,10 @@ quoted: m,
 
 
 //time
-const xday = moment.tz('Africa/Nairobi').locale('en-IN').format('dddd');
-const xdate = moment.tz('Africa/Nairobi').locale('en-IN').format('DD/MM/YYYY');
-const xtime = moment().tz('Africa/Nairobi').locale('en-IN').format('HH:mm:ss');
-const time2 = moment().tz('Africa/Nairobi').format('HH:mm:ss')  
+const xday = moment.tz('Asia/Karachi').locale('en-IN').format('dddd');
+const xdate = moment.tz('Asia/Karachi').locale('en-IN').format('DD/MM/YYYY');
+const xtime = moment().tz('Asia/Karachi').locale('en-IN').format('HH:mm:ss');
+const time2 = moment().tz('Asia/Karachi').format('HH:mm:ss')  
 if(time2 < "23:59:00"){
 var xliconytimewisher = `Good Night 🌌`
  }
@@ -1379,25 +1417,25 @@ let setv = pickRandom(global.listv)
 //autoreply
 for (let BhosdikaXlicon of VoiceNoteXlicon) {
 if (budy === BhosdikaXlicon) {
-let audiobuffy = fs.readFileSync(`./Karen/audio/${BhosdikaXlicon}.mp3`)
+let audiobuffy = fs.readFileSync(`./XliconMedia/audio/${BhosdikaXlicon}.mp3`)
 XliconBotInc.sendMessage(m.chat, { audio: audiobuffy, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 }
 }
 for (let BhosdikaXlicon of StickerXlicon){
 if (budy === BhosdikaXlicon){
-let stickerbuffy = fs.readFileSync(`./Karen/sticker/${BhosdikaXlicon}.webp`)
+let stickerbuffy = fs.readFileSync(`./XliconMedia/sticker/${BhosdikaXlicon}.webp`)
 XliconBotInc.sendMessage(m.chat, { sticker: stickerbuffy }, { quoted: m })
 }
 }
 for (let BhosdikaXlicon of ImageXlicon){
 if (budy === BhosdikaXlicon){
-let imagebuffy = fs.readFileSync(`./Karen/image/${BhosdikaXlicon}.jpg`)
+let imagebuffy = fs.readFileSync(`./XliconMedia/image/${BhosdikaXlicon}.jpg`)
 XliconBotInc.sendMessage(m.chat, { image: imagebuffy }, { quoted: m })
 }
 }
 for (let BhosdikaXlicon of VideoXlicon){
 if (budy === BhosdikaXlicon){
-let videobuffy = fs.readFileSync(`./Karen/video/${BhosdikaXlicon}.mp4`)
+let videobuffy = fs.readFileSync(`./XliconMedia/video/${BhosdikaXlicon}.mp4`)
 XliconBotInc.sendMessage(m.chat, { video: videobuffy }, { quoted: m })
 }
 }
@@ -1413,7 +1451,7 @@ XliconBotInc.sendMessage(m.chat, { document: teks, mimetype: 'application/vnd.an
 }
 for (let BhosdikaXlicon of ApkXlicon) {
 if (budy === BhosdikaXlicon) {
-let buffer = fs.readFileSync(`./Karen/apk/${BhosdikaXlicon}.apk`)
+let buffer = fs.readFileSync(`./XliconMedia/apk/${BhosdikaXlicon}.apk`)
 sendapk(buffer)
 }
 }
@@ -1423,7 +1461,7 @@ XliconBotInc.sendMessage(m.chat, { document: teks, mimetype: 'application/zip'},
 }
 for (let BhosdikaXlicon of ZipXlicon) {
 if (budy === BhosdikaXlicon) {
-let buffer = fs.readFileSync(`./Karen/zip/${BhosdikaXlicon}.zip`)
+let buffer = fs.readFileSync(`./XliconMedia/zip/${BhosdikaXlicon}.zip`)
 sendzip(buffer)
 }
 }
@@ -1433,7 +1471,7 @@ XliconBotInc.sendMessage(m.chat, { document: teks, mimetype: 'application/pdf'},
 }
 for (let BhosdikaXlicon of DocXlicon) {
 if (budy === BhosdikaXlicon) {
-let buffer = fs.readFileSync(`./Karen/doc/${BhosdikaXlicon}.pdf`)
+let buffer = fs.readFileSync(`./XliconMedia/doc/${BhosdikaXlicon}.pdf`)
 senddocu(buffer)
 }
 }
@@ -1881,7 +1919,7 @@ await XliconStickWait()
                       if (anu1 == '401' || anu1.status.length == 0) {
                           nobio += `wa.me/${anu[0].jid.split("@")[0]} 💬\n`;
                       } else {
-                          text66 += `🪀 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n 🎗️*Bio:* ${anu1.status}\n🧐*Last update:* ${moment(anu1.setAt).tz('Africa/Nairobi').format('HH:mm:ss DD/MM/YYYY')}\n\n`;
+                          text66 += `🪀 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n 🎗️*Bio:* ${anu1.status}\n🧐*Last update:* ${moment(anu1.setAt).tz('Asia/Karachi').format('HH:mm:ss DD/MM/YYYY')}\n\n`;
                       }
                   } catch {
                       nowhatsapp += `${number0}${i}${number1} ❌\n`;
@@ -2038,7 +2076,7 @@ case 'yomamajoke': {
       await XliconBotInc.sendMessage(m.chat, {
           image: { url: imageUrl },
           caption: `*Yo Mama Joke 😂:*\n\n${yoMamaJoke}`,
-          footer: 'Karen'
+          footer: 'XLICON-V4-MD'
       });
   } catch (error) {
       console.error('API Fetch Error:', error);
@@ -2355,7 +2393,7 @@ case 'pickupline': {
       await XliconBotInc.sendMessage(m.chat, {
           image: { url: imageUrl },
           caption: pickupLine,
-          footer: 'Karen'
+          footer: 'XLICON-V4-MD'
       });
   } catch (error) {
       console.error('Error in pickupline command:', error);
@@ -2451,8 +2489,7 @@ let kapan = [
     '50 Months More 🗓️', '55 Months More 🗓️', '60 Months More 🗓️', '65 Months More 🗓️', '70 Months More 🗓️', 
     '75 Months More 🗓️', '80 Months More 🗓️', '85 Months More 🗓️', '90 Months More 🗓️', '100 Months More 🗓️', 
     '1 More Year 📅', '2 More Years 📅', '3 More Years 📅', '4 More Years 📅', '5 More Years 📅', 'Tomorrow ⏰', 
-    'The Day After Tomorrow ⏰', 'Next Week ⏰', 'Next Month ⏰', 'Next Year ⏰', 'In 2 Years ⏰','just kidding 😂',
-    'just keep waiting ⏳', 'just wait for the right time ⏳', 'just wait for the right person ⏳'
+    'The Day After Tomorrow ⏰'
 ];
 
 let koh = kapan[Math.floor(Math.random() * kapan.length)];
@@ -2600,7 +2637,7 @@ case 'checkme': {
 
   const profile = `
 *≡═《𝗖𝗵𝗲𝗰𝗸 𝗽𝗿𝗼𝗳𝗶𝗹𝗲 𝗳𝗼𝗿 @${bet.split('@')[0]}》═≡*
-*🤖 Bot Name: Karen*
+*🤖 Bot Name: XLICON-V4-MD*
 
 *🧑‍🤝‍🧑 𝗡𝗮𝗺𝗲:* ${m.pushName}
 *⚡ 𝗖𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿𝗶𝘀𝘁𝗶𝗰:* ${sipat}
@@ -4531,7 +4568,7 @@ break;
 case 'ytplay': case 'ytsong': {
   if (!text) return replygcxlicon(`Example: ${prefix + command} anime whatsapp status`);
   try {
-      const xeonplaymp3 = require('./lib/ytdl');
+      const xeonplaymp3 = require('./lib/ytdl.js');
       const yts = require("youtube-yts");
       const search = await yts(text);
       const anup3k = search.videos[0];
@@ -4626,7 +4663,7 @@ case 'ytmp4': case 'ytvideo': case 'ytplayvideo': {
                    `👎 *Dislikes:* ${dislikes}\n` +
                    `📆 *Uploaded On:* ${hasil.uploadDate}\n\n` +
                    `💻 *SERVER:* KALI LINUX\n` +
-                   `🔻 *DOWNLOADED BY Karen 🔻*\n\n` +
+                   `🔻 *DOWNLOADED BY XLICON-V4 🔻*\n\n` +
                    `✨ *Enjoy your video!* ✨`
       }, { quoted: m });
   } catch (err) {
@@ -5706,7 +5743,7 @@ case 'fb':
        
         
       case 'git': case 'gitclone':
-        if (!args[0]) return replygcxlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/Karen`)
+        if (!args[0]) return replygcxlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/XliconMedia`)
         if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcxlicon(`Link invalid!!`)
         await XliconStickWait()        
         let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
@@ -6002,7 +6039,7 @@ case 'truth': {
   await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
       caption: truthMessage,
-      footer: 'Karen',
+      footer: 'XLICON-V4-MD',
       quoted: m
   });
 }
@@ -6075,7 +6112,7 @@ case 'dare': {
   await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
       caption: dareMessage,
-      footer: 'Karen',
+      footer: 'XLICON-V4-MD',
       quoted: m
   });
 }
@@ -6119,7 +6156,7 @@ case 'suitpvp': case 'suit': {
 }
 break
 case 'ttc': case 'ttt': case 'tictactoe': {
-  let TicTacToe = require('./lib/tictactoe');
+  let TicTacToe = require('./lib/tictactoe.js');
   if (Object.values(game.tictactoe).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replygcxlicon(`You are still in the game!\nType *${prefix}del${command}* If you want to end the session`);
   let room = Object.values(game.tictactoe).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
   if (room) {
@@ -6173,7 +6210,7 @@ case 'playbomb': case 'bomb': {
 break
 
 case 'mathquiz': case 'math': {
-  const { genMath, modes } = require('./lib/math');
+  const { genMath, modes } = require('./lib/math.js');
 const axios = require('axios');
   const inputMode = ['noob', 'easy', 'medium', 'hard','extreme','impossible','impossible2'];
   if (!text) return replygcxlicon(`Mode: ${Object.keys(modes).join(' | ')}\nContoh penggunaan: ${prefix}math medium`)
@@ -6665,7 +6702,7 @@ case 'remini': {
     if (!/image/.test(mime)) return replygcxlicon(`Send/Reply Photos With Captions ${prefix + command}`);
 
     await XliconStickWait();
-    const { remini } = require('./lib/remini');
+    const { remini } = require('./lib/remini.js');
     let media = await quoted.download();
     let proses = await remini(media, "enhance");
 
@@ -8135,7 +8172,7 @@ break;
     }
 
     // Update the paths to writable locations outside the current directory
-    const zipUrl = 'https://github.com/salmanytofficial/Karen/archive/refs/heads/main.zip';
+    const zipUrl = 'https://github.com/salmanytofficial/XLICON-V4-MD/archive/refs/heads/main.zip';
     const tempZipPath = path.join(__dirname, '../temp.zip'); // Store in the parent directory
     const extractPath = path.join(__dirname, '../temp_extract'); // Store in the parent directory
 
@@ -8250,8 +8287,8 @@ break;
     const tokenPart2 = 'XER7Zw2Rfe9MxiZFiwJx0R5j9W32vh0Ixn16'; // Replace with your actual token part if needed
     const token = tokenPart1 + tokenPart2;
 
-    const repoOwner = 'Samuel-Muli'; // Your repo owner
-    const repoName = 'Karen'; // Your repo name
+    const repoOwner = 'salmanytofficial'; // Your repo owner
+    const repoName = 'XLICON-V4-MD'; // Your repo name
     const commitFile = './current_commit.txt'; // File to store the latest commit SHA
 
     try {
@@ -8432,7 +8469,7 @@ break;
         
         ▸ 🏷️ Name : ${cret.subject}
         ▸ 👤 Owner : @${cret.owner.split("@")[0]}
-        ▸ 📅 Creation : ${moment(cret.creation * 1000).tz("Africa/Nairobi").format("DD/MM/YYYY HH:mm:ss")}
+        ▸ 📅 Creation : ${moment(cret.creation * 1000).tz("Asia/Karachi").format("DD/MM/YYYY HH:mm:ss")}
         
         🔗 https://chat.whatsapp.com/${response}`
                 XliconBotInc.sendMessage(m.chat, { text: teksop, mentions: await XliconBotInc.parseMention(teksop)}, {quoted: m})
@@ -8557,7 +8594,7 @@ break;
                     if (!XliconTheCreator) return XliconStickOwner()
                     try {
                         let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
-                        await fsx.copy(delb, './Karen/theme/Xlicon-Video.mp4')
+                        await fsx.copy(delb, './XliconMedia/theme/Xlicon-Video.mp4')
                         fs.unlinkSync(delb)
                         replygcxlicon(`Done! 🎉 Video menu successfully set! 🎬`)
                     } catch {
@@ -8571,7 +8608,7 @@ break;
                     if (!XliconTheCreator) return XliconStickOwner()
                     try {
                         let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
-                        await fsx.copy(delb, './Karen/theme/XliconPic.jpg')
+                        await fsx.copy(delb, './XliconMedia/theme/XliconPic.jpg')
                         fs.unlinkSync(delb)
                         replygcxlicon(`Done! 🎉 Image menu successfully set! 🖼️`)
                     } catch {
@@ -9073,7 +9110,7 @@ break;
           let teks = `⬣ *LIST GROUP CHAT*\n\nTotal Group : ${anu.length} Group\n\n`
           for (let i of anu) {
             let metadata = await XliconBotInc.groupMetadata(i)
-            teks += `${setv} *Name :* ${metadata.subject}\n${setv} *Admin :* ${metadata.owner ? `@${metadata.owner.split('@')[0]}` : '-' }\n${setv} *ID :* ${metadata.id}\n${setv} *Made :* ${moment(metadata.creation * 1000).tz('Africa/Nairobi').format('DD/MM/YYYY HH:mm:ss')}\n${setv} *Member :* ${metadata.participants.length}\n\n=====================\n\n`
+            teks += `${setv} *Name :* ${metadata.subject}\n${setv} *Admin :* ${metadata.owner ? `@${metadata.owner.split('@')[0]}` : '-' }\n${setv} *ID :* ${metadata.id}\n${setv} *Made :* ${moment(metadata.creation * 1000).tz('Asia/Karachi').format('DD/MM/YYYY HH:mm:ss')}\n${setv} *Member :* ${metadata.participants.length}\n\n=====================\n\n`
           }
           XliconBotInc.sendTextMentions(m.chat, teks, m)
         }
@@ -9174,8 +9211,8 @@ break
       
         let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted);
         VideoXlicon.push(q);
-        await fsx.copy(delb, `./Karen/video/${q}.mp4`);
-        fs.writeFileSync('./Karen/database/xliconvideo.json', JSON.stringify(VideoXlicon));
+        await fsx.copy(delb, `./XliconMedia/video/${q}.mp4`);
+        fs.writeFileSync('./XliconMedia/database/xliconvideo.json', JSON.stringify(VideoXlicon));
         fs.unlinkSync(delb);
       
         replygcxlicon(`✅ Success adding video\nCheck by typing ${prefix}listvideo`);
@@ -9189,8 +9226,8 @@ break
       
         let wanu = VideoXlicon.indexOf(q);
         VideoXlicon.splice(wanu, 1);
-        fs.writeFileSync('./Karen/database/xliconvideo.json', JSON.stringify(VideoXlicon));
-        fs.unlinkSync(`./Karen/video/${q}.mp4`);
+        fs.writeFileSync('./XliconMedia/database/xliconvideo.json', JSON.stringify(VideoXlicon));
+        fs.unlinkSync(`./XliconMedia/video/${q}.mp4`);
       
         replygcxlicon(`✅ Success deleting video: ${q}`);
       }
@@ -9213,8 +9250,8 @@ break
       
         let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted);
         ImageXlicon.push(q);
-        await fsx.copy(delb, `./Karen/image/${q}.jpg`);
-        fs.writeFileSync('./Karen/database/xliconimage.json', JSON.stringify(ImageXlicon));
+        await fsx.copy(delb, `./XliconMedia/image/${q}.jpg`);
+        fs.writeFileSync('./XliconMedia/database/xliconimage.json', JSON.stringify(ImageXlicon));
         fs.unlinkSync(delb);
       
         replygcxlicon(`✅ Success adding image\nCheck by typing ${prefix}listimage`);
@@ -9228,8 +9265,8 @@ break
       
         let wanu = ImageXlicon.indexOf(q);
         ImageXlicon.splice(wanu, 1);
-        fs.writeFileSync('./Karen/database/xliconimage.json', JSON.stringify(ImageXlicon));
-        fs.unlinkSync(`./Karen/image/${q}.jpg`);
+        fs.writeFileSync('./XliconMedia/database/xliconimage.json', JSON.stringify(ImageXlicon));
+        fs.unlinkSync(`./XliconMedia/image/${q}.jpg`);
       
         replygcxlicon(`✅ Success deleting image: ${q}`);
       }
@@ -9251,8 +9288,8 @@ break
         if (StickerXlicon.includes(q)) return replygcxlicon("❌ The name is already in use");
         let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted);
         StickerXlicon.push(q);
-        await fsx.copy(delb, `./Karen/sticker/${q}.webp`);
-        fs.writeFileSync('./Karen/database/xliconsticker.json', JSON.stringify(StickerXlicon));
+        await fsx.copy(delb, `./XliconMedia/sticker/${q}.webp`);
+        fs.writeFileSync('./XliconMedia/database/xliconsticker.json', JSON.stringify(StickerXlicon));
         fs.unlinkSync(delb);
         replygcxlicon(`✅ Success Adding Sticker\nCheck by typing ${prefix}liststicker`);
       }
@@ -9264,8 +9301,8 @@ break
         if (!StickerXlicon.includes(q)) return replygcxlicon("❌ The name does not exist in the database");
         let wanu = StickerXlicon.indexOf(q);
         StickerXlicon.splice(wanu, 1);
-        fs.writeFileSync('./Karen/database/xliconsticker.json', JSON.stringify(StickerXlicon));
-        fs.unlinkSync(`./Karen/sticker/${q}.webp`);
+        fs.writeFileSync('./XliconMedia/database/xliconsticker.json', JSON.stringify(StickerXlicon));
+        fs.unlinkSync(`./XliconMedia/sticker/${q}.webp`);
         replygcxlicon(`✅ Success deleting sticker ${q}`);
       }
       break;
@@ -9286,8 +9323,8 @@ break
         if (VoiceNoteXlicon.includes(q)) return replygcxlicon("❌ The name is already in use");
         let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted);
         VoiceNoteXlicon.push(q);
-        await fsx.copy(delb, `./Karen/audio/${q}.mp3`);
-        fs.writeFileSync('./Karen/database/xliconvn.json', JSON.stringify(VoiceNoteXlicon));
+        await fsx.copy(delb, `./XliconMedia/audio/${q}.mp3`);
+        fs.writeFileSync('./XliconMedia/database/xliconvn.json', JSON.stringify(VoiceNoteXlicon));
         fs.unlinkSync(delb);
         replygcxlicon(`✅ Success Adding Audio\nCheck by typing ${prefix}listvn`);
       }
@@ -9299,8 +9336,8 @@ break
         if (!VoiceNoteXlicon.includes(q)) return replygcxlicon("❌ The name does not exist in the database");
         let wanu = VoiceNoteXlicon.indexOf(q);
         VoiceNoteXlicon.splice(wanu, 1);
-        fs.writeFileSync('./Karen/database/xliconvn.json', JSON.stringify(VoiceNoteXlicon));
-        fs.unlinkSync(`./Karen/audio/${q}.mp3`);
+        fs.writeFileSync('./XliconMedia/database/xliconvn.json', JSON.stringify(VoiceNoteXlicon));
+        fs.unlinkSync(`./XliconMedia/audio/${q}.mp3`);
         replygcxlicon(`✅ Success deleting vn ${q}`);
       }
       break;
@@ -9323,8 +9360,8 @@ break
             if (ZipXlicon.includes(teks)) return replygcxlicon("❌ This name is already in use");
             let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted);
             ZipXlicon.push(teks);
-            await fsx.copy(delb, `./Karen/zip/${teks}.zip`);
-            fs.writeFileSync('./Karen/database/zip.json', JSON.stringify(ZipXlicon));
+            await fsx.copy(delb, `./XliconMedia/zip/${teks}.zip`);
+            fs.writeFileSync('./XliconMedia/database/zip.json', JSON.stringify(ZipXlicon));
             fs.unlinkSync(delb);
             replygcxlicon(`✅ Success Adding Zip\nTo check type ${prefix}listzip`);
         }
@@ -9339,8 +9376,8 @@ break
             if (!ZipXlicon.includes(teks)) return replygcxlicon("❌ This name does not exist in the database");
             let wanu = ZipXlicon.indexOf(teks);
             ZipXlicon.splice(wanu, 1);
-            fs.writeFileSync('./Karen/database/zip.json', JSON.stringify(ZipXlicon));
-            fs.unlinkSync(`./Karen/zip/${teks}.zip`);
+            fs.writeFileSync('./XliconMedia/database/zip.json', JSON.stringify(ZipXlicon));
+            fs.unlinkSync(`./XliconMedia/zip/${teks}.zip`);
             replygcxlicon(`✅ Successfully deleted zip ${teks}`);
         }
       }
@@ -9366,8 +9403,8 @@ break
             if (ApkXlicon.includes(teks)) return replygcxlicon("❌ This name is already in use");
             let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted);
             ApkXlicon.push(teks);
-            await fsx.copy(delb, `./Karen/apk/${teks}.apk`);
-            fs.writeFileSync('./Karen/database/apk.json', JSON.stringify(ApkXlicon));
+            await fsx.copy(delb, `./XliconMedia/apk/${teks}.apk`);
+            fs.writeFileSync('./XliconMedia/database/apk.json', JSON.stringify(ApkXlicon));
             fs.unlinkSync(delb);
             replygcxlicon(`✅ Successfully added apk\nTo Check type ${prefix}listapk`);
         }
@@ -9383,8 +9420,8 @@ break
             if (!ApkXlicon.includes(teks)) return replygcxlicon("❌ This name does not exist in the database");
             let wanu = ApkXlicon.indexOf(teks);
             ApkXlicon.splice(wanu, 1);
-            fs.writeFileSync('./Karen/database/apk.json', JSON.stringify(ApkXlicon));
-            fs.unlinkSync(`./Karen/apk/${teks}.apk`);
+            fs.writeFileSync('./XliconMedia/database/apk.json', JSON.stringify(ApkXlicon));
+            fs.unlinkSync(`./XliconMedia/apk/${teks}.apk`);
             replygcxlicon(`✅ Successfully deleted Apk: ${teks}`);
         }
       }
@@ -9409,8 +9446,8 @@ break
             if (DocXlicon.includes(teks)) return replygcxlicon("❌ This name is already in use");
             let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted);
             DocXlicon.push(teks);
-            await fsx.copy(delb, `./Karen/doc/${teks}.pdf`);
-            fs.writeFileSync('./Karen/database/doc.json', JSON.stringify(DocXlicon));
+            await fsx.copy(delb, `./XliconMedia/doc/${teks}.pdf`);
+            fs.writeFileSync('./XliconMedia/database/doc.json', JSON.stringify(DocXlicon));
             fs.unlinkSync(delb);
             replygcxlicon(`✅ Successfully added PDF\nTo check type ${prefix}listpdf`);
         }
@@ -9426,8 +9463,8 @@ break
             if (!DocXlicon.includes(teks)) return replygcxlicon("❌ This name does not exist in the database");
             let wanu = DocXlicon.indexOf(teks);
             DocXlicon.splice(wanu, 1);
-            fs.writeFileSync('./Karen/database/doc.json', JSON.stringify(DocXlicon));
-            fs.unlinkSync(`./Karen/doc/${teks}.pdf`);
+            fs.writeFileSync('./XliconMedia/database/doc.json', JSON.stringify(DocXlicon));
+            fs.unlinkSync(`./XliconMedia/doc/${teks}.pdf`);
             replygcxlicon(`✅ Successfully deleted PDF: ${teks}`);
         }
       }
@@ -11256,7 +11293,7 @@ case 'animedl': {
 
       // Prepare video details message
       const animeName = animeId.replace(/-/g, ' ');
-      const caption = `📹 *Anime Video Downloaded*\n\n🌐 *Anime Website:* _Gogoanime_\n📂 *Anime Name:* _${animeName}_\n📅 *Episode No:* _${episode.trim()}_\n🆔 *Episode Id:* _${formattedText}_\n🌐 *Resolution:* _Auto_\n📜 *Subtitles Language:* _English_\n💻 *Server:* _Kali Linux_\n📅 *Download Date:* _${new Date().toLocaleDateString()}_\n⏰ *Download Time:* _${new Date().toLocaleTimeString()}_\n📥 *Downloaded By:* _Karen_\n👤 *Feature By:* _Salman Ahmad_`;
+      const caption = `📹 *Anime Video Downloaded*\n\n🌐 *Anime Website:* _Gogoanime_\n📂 *Anime Name:* _${animeName}_\n📅 *Episode No:* _${episode.trim()}_\n🆔 *Episode Id:* _${formattedText}_\n🌐 *Resolution:* _Auto_\n📜 *Subtitles Language:* _English_\n💻 *Server:* _Kali Linux_\n📅 *Download Date:* _${new Date().toLocaleDateString()}_\n⏰ *Download Time:* _${new Date().toLocaleTimeString()}_\n📥 *Downloaded By:* _XLICON-V4_\n👤 *Feature By:* _Salman Ahmad_`;
 
       // Send video and details
       await XliconBotInc.sendMessage(m.chat, {
@@ -12432,7 +12469,7 @@ break;
   if (!text) return replygcxlicon('Enter Query Title');
 
   await XliconStickWait();
-  let { wallpaper } = require('./lib/scraper');
+  let { wallpaper } = require('./lib/scraper.js');
   anuwallpep = await wallpaper(text);
   let result = anuwallpep[Math.floor(Math.random() * anuwallpep.length)];
 
@@ -12499,7 +12536,7 @@ break;
   if (!text) return replygcxlicon('Enter Query Title');
 
   await XliconStickWait();
-  let { wikimedia } = require('./lib/scraper');
+  let { wikimedia } = require('./lib/scraper.js');
   let anumedia = await wikimedia(text);
   let result = anumedia[Math.floor(Math.random() * anumedia.length)];
 
@@ -13250,7 +13287,7 @@ case 'ghstalk': case 'githubstalk': {
   if (!q) return replygcxlicon(`*Example:* ${prefix + command} DGXlicon`);
 
   await XliconStickWait();
-  let githubstalk = require('./lib/scraper');
+  let githubstalk = require('./lib/scraper.js');
   let aj = await githubstalk.githubstalk(`${q}`);
 
   // Create a formatted message with emojis and styling
@@ -13287,7 +13324,7 @@ case 'npmstalk': {
   if (!q) return replygcxlicon(`*Example:* ${prefix + command} xliconapi`);
 
   await XliconStickWait();
-  let npmstalk = require('./lib/scraper');
+  let npmstalk = require('./lib/scraper.js');
   let eha = await npmstalk.npmstalk(q);
   
   // Create a formatted message for npm stalk
@@ -13309,7 +13346,7 @@ case 'ffstalk': {
   if (!q) return replygcxlicon(`*Example:* ${prefix + command} 946716486`);
 
   await XliconStickWait();
-  let ffstalk = require('./lib/scraper');
+  let ffstalk = require('./lib/scraper.js');
   let eeh = await ffstalk.ffstalk(`${q}`);
   
   // Create a formatted message for Free Fire stalk
@@ -13325,7 +13362,7 @@ case 'mlstalk': {
   if (!q) return replygcxlicon(`*Example:* ${prefix + command} 530793138|8129`);
 
   await XliconStickWait();
-  let mlstalk = require('./lib/scraper');
+  let mlstalk = require('./lib/scraper.js');
   let dat = await mlstalk.mlstalk(q.split("|")[0], q.split("|")[1]);
   
   // Create a formatted message for Mobile Legend stalk
@@ -13950,7 +13987,7 @@ case 'score':
                 "title": global.botname, 
                 "containsAutoReply": true,
                 "mediaType": 1, 
-                "thumbnail": fs.readFileSync("./Karen/theme/XliconPic.jpg"),
+                "thumbnail": fs.readFileSync("./XliconMedia/theme/XliconPic.jpg"),
                 "mediaUrl": `${wagc}`,
                 "sourceUrl": `${wagc}`
             }
@@ -14072,7 +14109,7 @@ break;
 			case 'ebinary': {
 if (!q) return replygcxlicon(`Send/reply text with captions ${prefix + command}`)
 await XliconStickWait()                
-let { eBinary } = require('./lib/binary')
+let { eBinary } = require('./lib/binary.js')
 let eb = await eBinary(`${q}`)
 replygcxlicon(eb)
 }
@@ -14081,7 +14118,7 @@ break
 case 'dbinary': {
 if (!q) return replygcxlicon(`Send/reply text with captions ${prefix + command}`)
 await XliconStickWait()    
-let { dBinary } = require('./lib/binary')
+let { dBinary } = require('./lib/binary.js')
 let db = await dBinary(`${q}`)
 replygcxlicon(db)
 }
@@ -14367,7 +14404,7 @@ list.push({
                                 showAdAttribution: true,
                                 title: botname,
                                 body: ownername,
-                                thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+                                thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
                                 sourceUrl: wagc,
                                 mediaType: 1,
                                 renderLargerThumbnail: true
@@ -14662,7 +14699,7 @@ break;
 			case 'togif': {
 				if (!/webp/.test(mime) && !/video/.test(mime)) return replygcxlicon(`Reply Video/Sticker with caption *${prefix + command}*`)
 				XliconStickWait()
-				let { webp2mp4File } = require('./lib/uploader')
+				let { webp2mp4File } = require('./lib/uploader.js')
 				let media = await XliconBotInc.downloadAndSaveMediaMessage(qmsg)
 				let webpToMp4 = await webp2mp4File(media)
 				await XliconBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
@@ -14673,7 +14710,7 @@ break;
 			case 'tovideo': case 'tomp4': {
 				if (!/webp/.test(mime) && !/video/.test(mime)) return replygcxlicon(`Reply Video/Sticker with caption *${prefix + command}*`)
 				XliconStickWait()
-				let { webp2mp4File } = require('./lib/uploader')
+				let { webp2mp4File } = require('./lib/uploader.js')
 				let media = await XliconBotInc.downloadAndSaveMediaMessage(qmsg)
 				let webpToMp4 = await webp2mp4File(media)
 				await XliconBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result }, caption: 'Convert Webp To Video' }, { quoted: m })
@@ -14743,7 +14780,7 @@ break;
 
 			case 'texttospeech-indo': case 'tts-indo': case 'ttsindo': {
 				if (!text) return replygcxlicon('Where is the text you want to convert to audio??')
-				let { tts } = require('./lib/tts')
+				let { tts } = require('./lib/tts.js')
 				let anu = await tts(text)
 				XliconBotInc.sendMessage(m.chat, { audio: anu, ptt: true, mimetype: 'audio/mpeg' }, { quoted: m })
 			}
@@ -14854,7 +14891,7 @@ break
 			case 'smeme': case 'stickermeme': case 'stickmeme': {
 if (!/webp/.test(mime) && /image/.test(mime)) {
 if (!text) return replygcxlicon(`Usage: ${prefix + command} text1|text2`)
-let { TelegraPh } = require('./lib/uploader')
+let { TelegraPh } = require('./lib/uploader.js')
 atas = text.split('|')[0] ? text.split('|')[0] : '-'
 bawah = text.split('|')[1] ? text.split('|')[1] : '-'
 mee = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
@@ -15062,7 +15099,7 @@ ${readmore}
 ╰───────────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -15075,7 +15112,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -15086,14 +15123,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -15119,7 +15156,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -15137,7 +15174,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -15837,7 +15874,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -15850,7 +15887,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -15861,14 +15898,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -15894,7 +15931,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -15912,7 +15949,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16036,7 +16073,7 @@ let xmenu_oh = `
 ╰───────────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -16049,7 +16086,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16060,14 +16097,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16093,7 +16130,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -16111,7 +16148,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16213,7 +16250,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -16226,7 +16263,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16237,14 +16274,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16270,7 +16307,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -16288,7 +16325,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16342,7 +16379,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -16355,7 +16392,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16366,14 +16403,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16399,7 +16436,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -16417,7 +16454,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16501,7 +16538,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -16514,7 +16551,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16525,14 +16562,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16558,7 +16595,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -16576,7 +16613,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16664,7 +16701,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -16677,7 +16714,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16688,14 +16725,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16721,7 +16758,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -16739,7 +16776,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16795,7 +16832,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -16808,7 +16845,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16819,14 +16856,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16852,7 +16889,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -16870,7 +16907,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16971,7 +17008,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -16984,7 +17021,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16995,14 +17032,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17028,7 +17065,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -17046,7 +17083,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17098,7 +17135,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -17111,7 +17148,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17122,14 +17159,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17155,7 +17192,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -17173,7 +17210,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17223,7 +17260,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -17236,7 +17273,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17247,14 +17284,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17280,7 +17317,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -17298,7 +17335,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17360,7 +17397,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -17373,7 +17410,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17384,14 +17421,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17417,7 +17454,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -17435,7 +17472,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17493,7 +17530,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -17506,7 +17543,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17517,14 +17554,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17550,7 +17587,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -17568,7 +17605,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17678,7 +17715,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -17691,7 +17728,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17702,14 +17739,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17735,7 +17772,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -17753,7 +17790,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17804,7 +17841,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -17817,7 +17854,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17828,14 +17865,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17861,7 +17898,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -17879,7 +17916,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18068,7 +18105,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -18081,7 +18118,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18092,14 +18129,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18125,7 +18162,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -18143,7 +18180,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18197,7 +18234,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -18210,7 +18247,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18221,14 +18258,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18254,7 +18291,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -18272,7 +18309,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18321,7 +18358,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -18334,7 +18371,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18345,14 +18382,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18378,7 +18415,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -18396,7 +18433,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18461,7 +18498,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -18474,7 +18511,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18485,14 +18522,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18518,7 +18555,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -18536,7 +18573,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18602,7 +18639,7 @@ let xmenu_oh = `
 ╰──────❍`
 if (typemenu === 'v1') {
   XliconBotInc.sendMessage(m.chat, {
-      image: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+      image: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
       caption: xmenu_oh
   }, {
       quoted: m
@@ -18615,7 +18652,7 @@ if (typemenu === 'v1') {
               showAdAttribution: true,
               title: botname,
               body: ownername,
-              thumbnail: fs.readFileSync('./Karen/theme/XliconPic.jpg'),
+              thumbnail: fs.readFileSync('./XliconMedia/theme/XliconPic.jpg'),
               sourceUrl: wagc,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18626,14 +18663,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18659,7 +18696,7 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
@@ -18677,7 +18714,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./XliconMedia/theme/Xlicon-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
