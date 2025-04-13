@@ -51,6 +51,7 @@ const database = new DataBase();
 const { GroupUpdate, GroupParticipantsUpdate, MessagesUpsert, Solving } = require('./src/message');
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif');
 const { isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/function');
+const { x } = require('pdfkit');
 
 
 const sessionDir = path.join(__dirname, 'session');
@@ -178,6 +179,27 @@ async function startXliconBot() {
         }
         if (connection == 'open') {
             console.log('Connected to : ' + JSON.stringify(XliconBotInc.user, null, 2));
+            
+            try {
+                // Send message to the connected bot's own ID
+                await XliconBotInc.sendMessage(
+                    XliconBotInc.user.id, 
+                    { 
+                        text:   `✅ Bot connection established!\n\n` +
+                                `*User ID:* ${XliconBotInc.user.id}\n` +
+                                `*Name:* ${XliconBotInc.user.name || 'Not set'}\n` +
+                                `*Time:* ${new Date().toLocaleString()}\n`+
+                                `*Script : Karen*\n` +
+                                `*Author : Samuel Muli*\n` +
+                                `*Gmail : salmmuelmully@gmail.com*\n`+
+                                `*Website : https://muli-samuel.onrender.com*\n`+
+  
+                                `*"Ｐｏｗｅｒｅｄ Ｂｙ* \n*꧁༒🖤⃕☽︎ＳⱥＭｕ☾⃕🖤︎༒꧂"*\n`      
+                    }
+                );
+            } catch (error) {
+                console.error('Failed to send connection notification:', error);
+            }
         } else if (receivedPendingNotifications == 'true') {
             console.log('Please wait About 1 Minute...');
         }
