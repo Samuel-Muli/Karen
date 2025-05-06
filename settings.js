@@ -24,7 +24,7 @@ global.ownername = process.env.OWNER_NAME || '꧁༒🖤⃕☽︎ＳⱥＭｕ☾
 //~~~~~~<Website and Social Links>~~~~~~~~~~\\
 global.websitex = process.env.WEBSITE_URL || "https://muli-samuel.onrender.com/";
 
-global.wagc = process.env.WHATSAPP_CHANNEL || "https://whatsapp.com/channel/0029VaINgEZK0IBaK1nDtE3f";
+global.wagc = process.env.WHATSAPP_CHANNEL || "https://chat.whatsapp.com/FV96nX6l7iCGmBeunOFPa0";
 
 
 //~~~~~~~~<Theme and Miscellaneous>~~~~~~~~~~\\

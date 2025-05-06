@@ -135,7 +135,7 @@ async function startXliconBot() {
         if (useMobile) throw new Error('Cannot use pairing code with mobile API');
 
         let phoneNumber;
-        phoneNumber = await question('Please enter your number starting with country code like 92:\n');
+        phoneNumber = await question('Please enter your number starting with country code like 254:\n');
         phoneNumber = phoneNumber.trim();
 
         setTimeout(async () => {
@@ -189,10 +189,10 @@ async function startXliconBot() {
                                 `*User ID:* ${XliconBotInc.user.id}\n` +
                                 `*Name:* ${XliconBotInc.user.name || 'Not set'}\n` +
                                 `*Time:* ${new Date().toLocaleString()}\n`+
-                                `*Script : Karen*\n` +
-                                `*Author : Samuel Muli*\n` +
-                                `*Gmail : salmmuelmully@gmail.com*\n`+
-                                `*Website : https://muli-samuel.onrender.com*\n`+
+                                `*Script:* Karen\n` +
+                                `*Author:* Samuel Muli\n` +
+                                `*Gmail:* salmmuelmully@gmail.com\n`+
+                                `*Website:* https://muli-samuel.onrender.com\n`+
   
                                 `*"Ｐｏｗｅｒｅｄ Ｂｙ* \n*꧁༒🖤⃕☽︎ＳⱥＭｕ☾⃕🖤︎༒꧂"*\n`      
                     }

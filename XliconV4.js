@@ -364,7 +364,7 @@ const isQuotedDocument = type === 'extendedTextMessage';
 			for (let jid of user) {
 				const limitUser = global.db.users[jid].vip ? global.limit.vip : prem.checkPremiumUser(jid, premium) ? global.limit.premium : global.limit.free
 				global.db.users[jid].limit = limitUser
-				console.log('Limit Reseted')
+				//console.log('Limit Reseted')
 			}
 		}, {
 			scheduled: true,
@@ -379,7 +379,8 @@ const isQuotedDocument = type === 'extendedTextMessage';
 
 		//Log
 		if (m.message) {
-			console.log(chalk.black.bgWhite('[ MESSAGE ]:'),chalk.black.bgGreen(new Date), chalk.black.bgHex('#00EAD3')(budy || m.type) + '\n' + chalk.black(chalk.bgCyanBright('[ FROM ] :'),chalk.bgYellow(m.pushName),chalk.bgHex('#FF449F')(m.sender),chalk.bgBlue('(' + (m.isGroup ? m.pushName : 'Private Chat', m.chat) + ')')));
+      console.log(chalk.black.bgWhite('[ MESSAGE ]:\n'), chalk.black.bgGreen(new Date), '\n' + chalk.black.bgHex('#00EAD3')(budy || m.type) + '\n' + chalk.black('\n' + chalk.bgCyanBright('\n\nNew Message\n[ FROM ] :\n'), chalk.bgYellow(m.pushName), chalk.bgHex('#FF449F\n')(m.sender), chalk.bgBlue('(' + (m.isGroup ? m.pushName : 'Private Chat', m.chat) + ')')));
+      console.log(chalk.black.bgWhite('[ TO ]:\n'), chalk.black.bgGreen(new Date), '  ' + chalk.black.bgHex('#00EAD3')(m.chat));
 		}
 //---------------------------------------------------------------------------------------------------------------------------//
 
@@ -495,7 +496,7 @@ const isQuotedDocument = type === 'extendedTextMessage';
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363232303807350@newsletter',
+                  newsletterJid: '254705244235@s.whatsapp.net',
                   newsletterName: ownername,
                   serverMessageId: 143
                 }
@@ -1281,13 +1282,13 @@ forwardingScore: 999,
 isForwarded: true,
 forwardedNewsletterMessageInfo: {
 newsletterName: "Click here to get $69",
-newsletterJid: "120363232303807350@newsletter",
+newsletterJid: "254705244235@s.whatsapp.net",
 },
 externalAdReply: {  
 showAdAttribution: true,
 title: botname,
 body: ownername,
-thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
 sourceUrl: websitex
 },
 },
@@ -1732,7 +1733,7 @@ await XliconStickWait()
   `;
 
   if (json[0].url) {
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg'; // URL for the image to send
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg'; // URL for the image to send
     await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
       caption: response,
@@ -1991,7 +1992,7 @@ case 'define': {
 ✍️ *Example:* ${example}`;
 
        // Image URL to use
-       const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+       const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
 
        // Send the message with the image and the reply text
@@ -2031,14 +2032,14 @@ case 'yomamajoke': {
       let yoMamaJoke = `${json.joke}`;
 
       // Image URL to use
-      const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+      const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
      
       // Send the message with the image and caption
       await XliconBotInc.sendMessage(m.chat, {
           image: { url: imageUrl },
           caption: `*Yo Mama Joke 😂:*\n\n${yoMamaJoke}`,
-          footer: 'XLICON-V4-MD'
+          footer: '꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂'
       });
   } catch (error) {
       console.error('API Fetch Error:', error);
@@ -2058,7 +2059,7 @@ break;
       let factText = `${themeemoji} *Fact:* ${data.fact}\n`;
 
       // Image URL to use
-      const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+      const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     
       // Send the message with the image and caption
@@ -2082,7 +2083,7 @@ case 'soulmate': {
   let jodoh = member[Math.floor(Math.random() * member.length)];
 
   // Image URL to use
-  const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+  const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
   try {
      
@@ -2110,7 +2111,7 @@ case 'soulmate': {
   let jodoh = member[Math.floor(Math.random() * member.length)]; // Random member for the other partner
 
   // Image URL to use
-  const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+  const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
   try {
       // Send the message with the image, caption, and mention the users
@@ -2135,7 +2136,7 @@ case 'dogcheck': case 'coolcheck':
 case 'waifucheck': {
     // Ensure someone is tagged
     if (!m.mentionedJid || m.mentionedJid.length === 0) {
-        return replygcxlicon(`Please mention someone to check! Example: ${prefix + command} @Xlicon`);
+        return replygcxlicon(`Please mention someone to check! Example: ${prefix + command} @꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂`);
     }
 
     // Generate a random percentage
@@ -2153,7 +2154,7 @@ case 'waifucheck': {
 `.trim();
 
     // Image URL to use
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     try {
         // Send the message with the image
@@ -2182,7 +2183,7 @@ case 'uglycheck':
 case 'handsomecheck': {
     // Ensure someone is tagged
     if (!m.mentionedJid || m.mentionedJid.length === 0) {
-        return replygcxlicon(`Please mention someone to check! Example: ${prefix + command} @Xlicon`);
+        return replygcxlicon(`Please mention someone to check! Example: ${prefix + command} @꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂`);
     }
 
     // Generate a random percentage
@@ -2201,7 +2202,7 @@ case 'handsomecheck': {
 `.trim();
 
     // Image URL to use (this can be customized)
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     try {
         // Send the message with the image URL
@@ -2221,7 +2222,7 @@ break;
   
       case 'charactercheck': {
         if (!m.mentionedJid || m.mentionedJid.length === 0) {
-            return replygcxlicon(`Please tag someone! Example: ${prefix + command} @Xlicon`);
+            return replygcxlicon(`Please tag someone! Example: ${prefix + command} @꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂`);
         }
     
         const traits = [
@@ -2250,7 +2251,7 @@ break;
 📜 Trait: *${randomTrait}*
         `.trim();
     
-        const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg'; // Replace with your desired image URL
+        const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg'; // Replace with your desired image URL
     
         try {
             // Send the message with the image URL
@@ -2269,7 +2270,7 @@ break;
   case 'beautifulcheck': {
     // Ensure someone is tagged
     if (!m.mentionedJid || m.mentionedJid.length === 0) {
-        return replygcxlicon(`Please tag someone! Example: ${prefix + command} @Xlicon`);
+        return replygcxlicon(`Please tag someone! Example: ${prefix + command} @꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂`);
     }
 
     // Generate a random percentage
@@ -2288,7 +2289,7 @@ break;
     `.trim();
 
     // Image URL to use (this can be customized)
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg'; // Replace with your desired image URL
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg'; // Replace with your desired image URL
 
     try {
         // Send the message with the image and mentions
@@ -2318,7 +2319,7 @@ case 'pick': {
   let xliconshimts = member[Math.floor(Math.random() * member.length)];
 
   // Image URL to use
-  const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+  const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
   try {
      
@@ -2348,14 +2349,14 @@ case 'pickupline': {
       let pickupLine = `*Here's a pickup line for you 😘💖:*\n\n${json.pickupline} 😂❤️`;
 
       // Image URL to use
-      const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+      const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
      
       // Send the message with the image, caption, and footer
       await XliconBotInc.sendMessage(m.chat, {
           image: { url: imageUrl },
           caption: pickupLine,
-          footer: 'XLICON-V4-MD'
+          footer: '꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂'
       });
   } catch (error) {
       console.error('Error in pickupline command:', error);
@@ -2375,7 +2376,7 @@ case 'quotes': {
   const textquotes = `💬 *Quote:* ${quoteText}\n\n👤 *Author:* ${quoteAuthor}`;
 
   // Image URL to use
-  const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+  const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
   // Send the quote with the image directly from the URL
   await XliconBotInc.sendMessage(m.chat, {
@@ -2397,7 +2398,7 @@ case 'can': {
   let jawab = `*Can ${text}*\nAnswer: ${keh} 🤩`;
 
   // Image URL to use
-  const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+  const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
   try {
       // Send the message with the image and the answer
@@ -2423,7 +2424,7 @@ let kah = apa[Math.floor(Math.random() * apa.length)];
 let jawab = `*Is ${text}*\nAnswer: ${kah} 😎`;
 
 // Image URL to use
-const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
 try {
     // Send the message with the image and the answer
@@ -2458,7 +2459,7 @@ let koh = kapan[Math.floor(Math.random() * kapan.length)];
 let jawab = `*When ${text}*\nAnswer: ${koh} 🤔`;
 
 // Image URL to use
-const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
 try {
     // Send the message with the image and the answer
@@ -2483,7 +2484,7 @@ let kah = lel[Math.floor(Math.random() * lel.length)];
 let jawab = `*What ${text}* ❓\nAnswer: ${kah} 🤔`;
 
 // Image URL to use
-const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
 try {
     await XliconBotInc.sendMessage(m.chat, {
@@ -2506,7 +2507,7 @@ let kah = wherelol[Math.floor(Math.random() * wherelol.length)];
 let jawab = `*Where ${text}* ❓\nAnswer: ${kah} 🤔`;
 
 // Image URL to use
-const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
 try {
     await XliconBotInc.sendMessage(m.chat, {
@@ -2529,7 +2530,7 @@ let kah = gimana[Math.floor(Math.random() * gimana.length)];
 let jawab = `*How ${text}* ❓\nAnswer: ${kah} 🤔`;
 
 // Image URL to use
-const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
 try {
     await XliconBotInc.sendMessage(m.chat, {
@@ -2552,7 +2553,7 @@ let kah = ra[Math.floor(Math.random() * ra.length)];
 let jawab = `*Rate ${text}* 💯\nAnswer: ${kah}% 🏆`;
 
 // Image URL to use
-const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
 try {
 
@@ -2599,7 +2600,7 @@ case 'checkme': {
 
   const profile = `
 *≡═《𝗖𝗵𝗲𝗰𝗸 𝗽𝗿𝗼𝗳𝗶𝗹𝗲 𝗳𝗼𝗿 @${bet.split('@')[0]}》═≡*
-*🤖 Bot Name: XLICON-V4-MD*
+*🤖 Bot Name: ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂*
 
 *🧑‍🤝‍🧑 𝗡𝗮𝗺𝗲:* ${m.pushName}
 *⚡ 𝗖𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿𝗶𝘀𝘁𝗶𝗰:* ${sipat}
@@ -2617,7 +2618,7 @@ case 'checkme': {
 *≡═《𝗖𝗵𝗲𝗰𝗸 𝗽𝗿𝗼𝗽𝗲𝗿𝘁𝗶𝗲𝘀》═≡*
 `;
 
-const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 await XliconBotInc.sendMessage(m.chat, {
   image: { url: imageUrl }, // Directly use the URL for the image
   caption: profile, // Custom message with check result and mentioned user
@@ -2787,7 +2788,7 @@ case 'sound158':
 case 'sound159':
 case 'sound160':
 case 'sound161':
-XliconBotInc_dev = await getBuffer(`https://github.com/salmanytofficial/Tiktokmusic-API/raw/master/tiktokmusic/${command}.mp3`)
+XliconBotInc_dev = await getBuffer(`https://github.com/Samuel-Muli/Tiktokmusic-API/raw/master/tiktokmusic/${command}.mp3`)
 await XliconBotInc.sendMessage(m.chat, { audio: XliconBotInc_dev, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
 break
 
@@ -4625,7 +4626,7 @@ case 'ytmp4': case 'ytvideo': case 'ytplayvideo': {
                    `👎 *Dislikes:* ${dislikes}\n` +
                    `📆 *Uploaded On:* ${hasil.uploadDate}\n\n` +
                    `💻 *SERVER:* KALI LINUX\n` +
-                   `🔻 *DOWNLOADED BY XLICON-V4 🔻*\n\n` +
+                   `🔻 *DOWNLOADED BY ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ 🔻*\n\n` +
                    `✨ *Enjoy your video!* ✨`
       }, { quoted: m });
   } catch (err) {
@@ -4706,13 +4707,13 @@ case 'ytv': {
     const videoChannel = videoDetails.channel;
 
     // Create a caption with video details
-    const caption = `*_DOWNLOADED BY XLICON V4 MD_*\n\n` +
+    const caption = `*_DOWNLOADED BY ꧁❀Kᴀʀᴇɴ۞❀꧂_*\n\n` +
       `🎬 *Title*: _${videoTitle}_\n` +
       `🔗 *YouTube URL*: _${videoLink}_\n` +
       `⏳ *Duration*: _${videoDuration}_\n` +
       `👀 *Views*: _${videoViews}_\n` +
       `📺 *Channel*: _${videoChannel}_\n` +
-      `✨ *Enjoy your video!* 🎥\n🔥 *Powered by Xlicon Bot* 💻`;
+      `✨ *Enjoy your video!* 🎥\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻`;
 
     // Send the video to the chat
     await XliconBotInc.sendMessage(m.chat, {
@@ -4745,7 +4746,7 @@ case 'yta2': {
         }
 
         const audioLink = hasil.result.audio;
-        const caption = `*_DOWNLOADED BY XLICON V4 MD_*\n\n🎵 *Title*: _${hasil.result.title}_\n✨ *Enjoy your audio!* 🎶\n🔥 *Powered by Xlicon Bot* 💻`;
+        const caption = `*_DOWNLOADED BY ꧁❀Kᴀʀᴇɴ۞❀꧂_*\n\n🎵 *Title*: _${hasil.result.title}_\n✨ *Enjoy your audio!* 🎶\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻`;
 
         // Send caption to the user
         await replygcxlicon(caption);
@@ -4790,9 +4791,9 @@ case 'ytv2': {
     const { title, dl: videoUrl } = apiResponse.data;
 
     // Create a caption
-    const caption = `🎬 *Downloaded by Xlicon v4 MD*\n\n` +
+    const caption = `🎬 *Downloaded by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ *\n\n` +
       `🎥 *Title*: _${title}_\n` +
-      `✨ *Enjoy your video!* 🎉\n🔥 *Powered by Xlicon Bot* 💻`;
+      `✨ *Enjoy your video!* 🎉\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻`;
 
     // Send the video
     await XliconBotInc.sendMessage(m.chat, {
@@ -4829,10 +4830,10 @@ case 'likee': case 'likeedl': {
     const videoWithWatermark = videoDetails.withWatermark;
     const videoWithoutWatermark = videoDetails.withoutwatermark;
 
-    const caption = `*_DOWNLOADED BY XLICON V4 MD_*\n\n` +
+    const caption = `*_DOWNLOADED BY ꧁❀Kᴀʀᴇɴ۞❀꧂_*\n\n` +
       `🎬 *Title*: _${videoTitle}_\n` +
       `📺 *Watch Video*: _${text}_\n` +
-      `✨ *Enjoy your video!* 🎥\n🔥 *Powered by Xlicon Bot* 💻`;
+      `✨ *Enjoy your video!* 🎥\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻`;
 
     // Send the video (choose watermark-free or watermark version)
     await XliconBotInc.sendMessage(m.chat, {
@@ -4871,12 +4872,12 @@ case 'capcut': case 'capcutdl': {
     const videoThumbnail = videoDetails.thumbnail || '';
     const videoUrl = videoDetails.video;
 
-    const caption = `*_DOWNLOADED BY XLICON V4 MD_*\n\n` +
+    const caption = `*_DOWNLOADED BY ꧁❀Kᴀʀᴇɴ۞❀꧂_*\n\n` +
       `🎬 *Title*: _${videoTitle}_\n` +
       `📝 *Description*: _${videoDescription}_\n` +
       `✨ *Usage*: _${videoUsage}_\n` +
       `📺 *Watch Video*: _${text}_\n` +
-      `✨ *Enjoy your video!* 🎥\n🔥 *Powered by Xlicon Bot* 💻`;
+      `✨ *Enjoy your video!* 🎥\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻`;
 
     // Send the video from CapCut
     await XliconBotInc.sendMessage(m.chat, {
@@ -5124,7 +5125,7 @@ case 'instagram': case 'insta': case 'ig': case 'igvideo': case 'igvid': {
     const thumbnail = api_response.data[0].thumbnail;
     
     // Caption for the video
-    const cap = `✨ *Enjoy your video!* 🎥\n🔥 *Powered by Xlicon Bot* 💻`;
+    const cap = `✨ *Enjoy your video!* 🎥\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻`;
 
     // Send the Instagram video message
     await XliconBotInc.sendMessage(m.chat, {
@@ -5160,7 +5161,7 @@ case 'instagramimg': case 'instaimg': case 'igimage': case 'igimg': {
 
     // Extract image URLs from the response
     const imageLinks = api_response.BK9.map(item => item.url);
-    const cap = '*🎉 Thank you for using xlicon v4!*'; // Optional caption for the images
+    const cap = '*🎉 Thank you for using ꧁❀Kᴀʀᴇɴ۞❀꧂ v4!*'; // Optional caption for the images
 
     // Loop through each image and send them
     for (const imageUrl of imageLinks) {
@@ -5210,7 +5211,7 @@ case 'fb':
 ⏳ *Duration*: ${data.video.duration || "Unknown"}
 📹 *Quality*: ${video.quality}
 💾 *Format*: ${video.format}
-✨ *Enjoy your video!* 🎥\n🔥 *Powered by Xlicon Bot* 💻    
+✨ *Enjoy your video!* 🎥\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻    
 
     `.trim();
     
@@ -5256,7 +5257,7 @@ case 'fb':
 
 🔗 *Download Link:* ${downloadLink}
 
-✨ *Enjoy your video!* 🎥\n🔥 *Powered by Xlicon Bot* 💻
+✨ *Enjoy your video!* 🎥\n🔥 *Powered by ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ Bot* 💻
 
 `;
 
@@ -5705,7 +5706,7 @@ case 'fb':
        
         
       case 'git': case 'gitclone':
-        if (!args[0]) return replygcxlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/salmanytofficial/Karen`)
+        if (!args[0]) return replygcxlicon(`Where is the link?\nExample :\n${prefix}${command} https://github.com/Samuel-Muli/Karen`)
         if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcxlicon(`Link invalid!!`)
         await XliconStickWait()        
         let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
@@ -6001,7 +6002,7 @@ case 'truth': {
   await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
       caption: truthMessage,
-      footer: 'XLICON-V4-MD',
+      footer: '꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂',
       quoted: m
   });
 }
@@ -6074,7 +6075,7 @@ case 'dare': {
   await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
       caption: dareMessage,
-      footer: 'XLICON-V4-MD',
+      footer: '꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂',
       quoted: m
   });
 }
@@ -6253,7 +6254,7 @@ case 'blackboxai': {
   try {
     let gpt = await (await fetch(`https://itzpire.com/ai/blackbox-ai?q=${text}`)).json();
     const reply = `🔥 *Blackbox AI Response* 🔥\n\n💡 *Result:* ${gpt.result}\n\n📝 *Your Request:* ${text}`;
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
@@ -6275,7 +6276,7 @@ case 'travel-assistant': {
       return replygcxlicon(`❌ *Error:* ${gpt.message}`);
     }
     const reply = `🌍 *Travel Assistant AI* 🌍\n\n🗺️ *Your Request:* ${text}\n\n💬 *Response:* ${gpt.result}`;
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
@@ -6443,7 +6444,7 @@ case 'ai': case 'gpt': case 'openai': {
         const reply = `🌟 *OpenAI Response* 🌟\n\n💬 *Response:* ${gpt.result}\n\n📝 *Your Request:* ${text}`;
 
         await XliconBotInc.sendMessage(m.chat, {
-            image: { url: 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg' },
+            image: { url: 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg' },
             caption: reply,
             mentions: [m.sender]
         });
@@ -6483,7 +6484,7 @@ case 'checkgpt': {
             + `*💬 Additional Feedback:* \n_${data.result.additional_feedback}_\n`;
 
         await XliconBotInc.sendMessage(m.chat, {
-            image: { url: 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg' },
+            image: { url: 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg' },
             caption: feedback,
             mentions: [m.sender]
         });
@@ -6501,12 +6502,12 @@ case 'darky': {
     try {
         let response = await (await fetch(`https://evlgpt.onrender.com/egpt?prompt=${encodeURIComponent(text)}`)).json();
 
-        let message = response.message.replace(/GURUGPT V1/g, 'XLICON V4');
+        let message = response.message.replace(/GURUGPT V1/g, '꧁❀Kᴀʀᴇɴ۞❀꧂ V4');
 
-        const reply = `🔥 *Xlicon AI Response* 🔥\n\n💡 *Result:* ${message}\n\n📝 *Your Request:* ${text}`;
+        const reply = `🔥 *꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ AI Response* 🔥\n\n💡 *Result:* ${message}\n\n📝 *Your Request:* ${text}`;
 
         await XliconBotInc.sendMessage(m.chat, {
-            image: { url: 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg' },
+            image: { url: 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg' },
             caption: reply,
             mentions: [m.sender]
         });
@@ -6538,10 +6539,10 @@ case 'bing': {
     let response = await (await fetch(apiUrl)).json();
     
     // Prepare the response text with emojis
-    const reply = `🔥 *Xlicon AI Response* 🔥\n\n💬 *Response:* ${response.result}\n\n📝 *Your Request:* ${text}`;
+    const reply = `🔥 *꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂ AI Response* 🔥\n\n💬 *Response:* ${response.result}\n\n📝 *Your Request:* ${text}`;
 
     // Image URL to use
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     // Send the message with the image URL and the reply text
     await XliconBotInc.sendMessage(m.chat, {
@@ -6568,7 +6569,7 @@ case 'mathsai': {
     const reply = `🔥 *Maths AI Response* 🔥\n\n🧮 *Result:* ${gpt.result}\n\n📝 *Your Request:* ${text}`;
 
     // Image URL to use
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     // Send the message with the image URL and the reply text
     await XliconBotInc.sendMessage(m.chat, {
@@ -7176,7 +7177,7 @@ case 'anticall':
       if (!m.isGroup) return XliconStickGroup();
       if (!m.isBotAdmin) return XliconStickBotAdmin();
     
-      if (!text) return replygcxlicon(`❗ Please provide the number you want to invite to the group.\n\nExample: *${prefix + command} 916909137213*`);
+      if (!text) return replygcxlicon(`❗ Please provide the number you want to invite to the group.\n\nExample: *${prefix + command} 254705244235*`);
       if (text.includes('+')) return replygcxlicon(`⚠️ Please enter the number without the '+' sign.`);
       if (isNaN(text)) return replygcxlicon(`🚫 Please enter only the digits, along with your country code, without spaces.`);
     
@@ -7242,7 +7243,7 @@ case 'anticall':
 								if (i.status == 500) return replygcxlicon('Group Full!')
 								if (i.status == 403) {
 									await XliconBotInc.sendMessage(m.chat, { text: `@${numbersOnly.split('@')[0]} Cannot Be Added\n\nBecause Target Private\n\nInvitations will be sent to\n-> wa.me/${numbersOnly.replace(/\D/g, '')}\nVia Private Chat`, mentions: [numbersOnly] }, { quoted : m })
-									await XliconBotInc.sendMessage(`${numbersOnly ? numbersOnly : '916909137213@s.whatsapp.net'}`, { text: `${'https://chat.whatsapp.com/' + invv}\n------------------------------------------------------\n\nAdmin: wa.me/${m.sender}\nInvite you to this group\nPlease enter if you wish🙇`, detectLink: true, mentions: [numbersOnly] }, { quoted : floc2 }).catch((err) => replygcxlicon('Failed to Send Invitation!'))
+									await XliconBotInc.sendMessage(`${numbersOnly ? numbersOnly : '254705244235@s.whatsapp.net'}`, { text: `${'https://chat.whatsapp.com/' + invv}\n------------------------------------------------------\n\nAdmin: wa.me/${m.sender}\nInvite you to this group\nPlease enter if you wish🙇`, detectLink: true, mentions: [numbersOnly] }, { quoted : floc2 }).catch((err) => replygcxlicon('Failed to Send Invitation!'))
 								} else {
 									replygcxlicon('Success!!')
 								}
@@ -8033,7 +8034,7 @@ case 'autobio':
   
   case 'delowner':
       if (!XliconTheCreator) return XliconStickOwner();
-      if (!args[0]) return replygcxlicon(`❌ Use ${prefix + command} number\nExample: ${prefix + command} 916909137213`);
+      if (!args[0]) return replygcxlicon(`❌ Use ${prefix + command} number\nExample: ${prefix + command} 254705244235`);
       
       ya = q.split("|")[0].replace(/[^0-9]/g, '');
       unp = owner.indexOf(ya);
@@ -8134,7 +8135,7 @@ break;
     }
 
     // Update the paths to writable locations outside the current directory
-    const zipUrl = 'https://github.com/salmanytofficial/XLICON-V4-MD/archive/refs/heads/main.zip';
+    const zipUrl = 'https://github.com/Samuel-Muli/꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂/archive/refs/heads/main.zip';
     const tempZipPath = path.join(__dirname, '../temp.zip'); // Store in the parent directory
     const extractPath = path.join(__dirname, '../temp_extract'); // Store in the parent directory
 
@@ -8249,8 +8250,8 @@ break;
     const tokenPart2 = 'XER7Zw2Rfe9MxiZFiwJx0R5j9W32vh0Ixn16'; // Replace with your actual token part if needed
     const token = tokenPart1 + tokenPart2;
 
-    const repoOwner = 'salmanytofficial'; // Your repo owner
-    const repoName = 'XLICON-V4-MD'; // Your repo name
+    const repoOwner = 'Samuel-Muli'; // Your repo owner
+    const repoName = '꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂'; // Your repo name
     const commitFile = './current_commit.txt'; // File to store the latest commit SHA
 
     try {
@@ -8556,7 +8557,7 @@ break;
                     if (!XliconTheCreator) return XliconStickOwner()
                     try {
                         let delb = await XliconBotInc.downloadAndSaveMediaMessage(quoted)
-                        await fsx.copy(delb, './Karen/theme/Xlicon-Video.mp4')
+                        await fsx.copy(delb, './Karen/theme/Karen-Video.mp4')
                         fs.unlinkSync(delb)
                         replygcxlicon(`Done! 🎉 Video menu successfully set! 🎬`)
                     } catch {
@@ -8657,7 +8658,7 @@ break;
                                   showAdAttribution: true,
                                   title: botname,
                                   body: `Sent in ${i.length} Group`,
-                                  thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+                                  thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
                                   sourceUrl: wagc,
                                   mediaType: 1,
                                   renderLargerThumbnail: true
@@ -8694,7 +8695,7 @@ break;
               let [poll, opt] = text.split("|")
               if (text.split("|") < 2)
                   return await replygcxlicon(
-                      `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Xlicon,Cheems,Doge...`
+                      `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|꧁༒🖤⃕☽︎ＳⱥＭｕ☾⃕🖤︎༒꧂...`
                   )
               try {
               let options = []
@@ -8709,7 +8710,7 @@ break;
               })
               } catch {
                 replygcxlicon(
-                      `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Xlicon,Cheems,Doge...`
+                      `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|꧁༒🖤⃕☽︎ＳⱥＭｕ☾⃕🖤︎༒꧂...`
                   )
                   }
           }
@@ -9598,1142 +9599,6 @@ ${translatedChapterHindi.text}`
  }     
   break
 
-
-  case 'gita-verse': case 'gita': case 'bhagavatgita': {
-    try {
-      // Extract the verse number from the command text.
-      let verseNumber = m.text.split(' ')[1]
-      if (!verseNumber || isNaN(verseNumber)) {
-        verseNumber = Math.floor(Math.random() * 700) + 1
-      }
-      let res = await fetch(`https://gita-api.vercel.app/odi/verse/${verseNumber}`)
-      if (!res.ok) {
-        let error = await res.json()
-        throw new Error(
-          `API request failed with status ${res.status} and message ${error.detail[0].msg}`
-        )
-      }
-      let json = await res.json()
-      console.log('JSON response:', json)
-      let gitaVerse = `
-  🕉 *Bhagavad Gita: Sacred Teachings*\n
-  📜 *Chapter ${json.chapter_no}: ${json.chapter_name}*\n
-  Verse ${json.verse_no}:\n
-  " ${json.verse} "\n
-  *🔮 Translation:*\n
-  ${json.translation}\n
-  *🧘‍♂️ Spiritual Insight (Purport):*\n
-  ${json.purport}`
-      replygcxlicon(gitaVerse)
-      if (json.audio_link) {
-        XliconBotInc.sendMessage(m.chat, {audio: {url:json.audio_link}, mimetype: 'audio/mp4', ptt: true}, {quoted:m})
-      }
-    } catch (error) {
-      console.error(error)
-      // Handle the error appropriately
-    }
-  }
-  break
-  
-        case 'quran': {
-      try {
-      // Extract the surah number or name from the command text.
-      let surahInput = m.text.split(' ')[1]
-      if (!surahInput) {
-        throw new Error(`Please specify the surah number or name`)
-      }
-      let surahListRes = await fetch('https://quran-endpoint.vercel.app/quran')
-      let surahList = await surahListRes.json()
-      let surahData = surahList.data.find(surah => 
-          surah.number === Number(surahInput) || 
-          surah.asma.ar.short.toLowerCase() === surahInput.toLowerCase() || 
-          surah.asma.en.short.toLowerCase() === surahInput.toLowerCase()
-      )
-      if (!surahData) {
-        throw new Error(`Couldn't find surah with number or name "${surahInput}"`)
-      }
-      let res = await fetch(`https://quran-endpoint.vercel.app/quran/${surahData.number}`)
-      if (!res.ok) {
-        let error = await res.json();
-        throw new Error(`API request failed with status ${res.status} and message ${error.message}`)
-      }
-  
-      let json = await res.json()
-  
-      // Translate tafsir from Bahasa Indonesia to Urdu
-      let translatedTafsirUrdu = await translate(json.data.tafsir.id, { to: 'ur', autoCorrect: true })
-  
-      // Translate tafsir from Bahasa Indonesia to English
-      let translatedTafsirEnglish = await translate(json.data.tafsir.id, { to: 'en', autoCorrect: true })
-  
-      let quranSurah = `
-  🕌 *Quran: The Holy Book*\n
-  📜 *Surah ${json.data.number}: ${json.data.asma.ar.long} (${json.data.asma.en.long})*\n
-  Type: ${json.data.type.en}\n
-  Number of verses: ${json.data.ayahCount}\n
-  🔮 *Explanation (Urdu):*\n
-  ${translatedTafsirUrdu.text}\n
-  🔮 *Explanation (English):*\n
-  ${translatedTafsirEnglish.text}`
-  
-      replygcxlicon(quranSurah)
-  
-      if (json.data.recitation.full) {
-        XliconBotInc.sendMessage(m.chat, { audio: {url: json.data.recitation.full}, mimetype: 'audio/mp4', ptt: true, fileName: `recitation.mp3`, }, {quoted: m})
-      }
-    } catch (error) {
-      replygcxlicon(`Error: ${error.message}`)
-    }
-    }
-    break
-
-
-
-
-
-    case 'namazchk': {
-      // Poll options for prayer times
-      const options = ['Fajr', 'Zuhr', 'Asr', 'Maghrib', 'Isha'];
-    
-      // Check if the user is authorized
-      if (!XliconTheCreator) return XliconStickOwner();
-    
-      // Prepare the question and options for the poll
-      const pollQuestion = 'Which prayer(s) did you offer?';
-      try {
-        // Send the poll with the prayer options
-        await XliconBotInc.sendMessage(m.chat, {
-          poll: {
-            name: pollQuestion,
-            values: options,
-          }
-        });
-      } catch {
-        replygcxlicon(
-          `Error: Please make sure to provide at least 2 options for the poll.\nExample: ${prefix}poll Who is best admin?|Xlicon,Cheems,Doge...`
-        );
-      }
-    }
-    break;
-    
-    
-    
-    
-    case 'kisahnabi': {
-      const prophets = [
-          'adam', 'ayyub', 'daud', 'dzulkifli', 'harun', 'hud', 'ibrahim', 'idris', 
-          'ilyas', 'ilyasa', 'isa', 'ishaq', 'ismail', 'luth', 'muhammad', 'musa', 
-          'nuh', 'sholeh', 'sulaiman', 'syuaib', 'yahya', 'yaqub', 'yunus', 'yusuf', 'zakariya'
-      ];
-    
-      // Ensure the text input is properly trimmed and lowercased
-      const selectedProphet = text?.trim().toLowerCase();
-    
-      // Check if a text was provided
-      if (!text) {
-          const prophetList = prophets.map(prophet => `- ${prophet.charAt(0).toUpperCase() + prophet.slice(1)}`).join('\n');
-          const message = `*Select a Prophet*\n\nPlease type the name of a prophet from the list below to read their story:\n\n${prophetList}`;
-          await XliconBotInc.sendText(m.chat, message);
-          return;
-      }
-    
-      // Check if the selected prophet is valid
-      if (!prophets.includes(selectedProphet)) {
-          return XliconBotInc.sendText(
-              m.chat, "*Not Found*\n*📮 Tips:* Please select a valid prophet from the list."
-          );
-      }
-    
-      // Fetch and display the story and image of the selected prophet
-      try {
-          const response = await fetch(`https://raw.githubusercontent.com/ZeroChanBot/Api-Freee/a9da6483809a1fbf164cdf1dfbfc6a17f2814577/data/kisahNabi/${selectedProphet}.json`);
-          const story = await response.json();
-    
-          // Static image URL for all prophets
-          const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with actual image URL for each prophet if needed
-    
-          // Format the story with relevant details
-          const formattedStory = `_*👳 Prophet:*_ ${story.name}\n`
-                                + `_*📅 Date of Birth:*_ ${story.thn_kelahiran}\n`
-                                + `_*📍 Place of Birth:*_ ${story.tmp}\n`
-                                + `_*📊 Age:*_ ${story.usia}\n\n`
-                                + `*— — —  [ S T O R Y ] — — —*\n\n`
-                                + `${story.description}`;
-    
-          // Translate the story to English if possible
-          const translation = await translate(formattedStory, { to: 'en' }).catch(() => null);
-    
-          // Send the message with the story and image
-          if (translation?.text) {
-              await XliconBotInc.sendMessage(m.chat, {
-                  image: { url: imageUrl }, // Static image URL
-                  caption: translation.text // Translated story text
-              });
-          } else {
-              await XliconBotInc.sendMessage(m.chat, {
-                  image: { url: imageUrl }, // Static image URL
-                  caption: formattedStory // Original story text
-              });
-          }
-      } catch (error) {
-          await XliconBotInc.sendText(
-              m.chat, "*Not Found*\n*📮 Tips:* Please try selecting a prophet from the list."
-          );
-      }
-    }
-    break;
-    
-    
-    
-    case 'asmaulhusna': {
-      const contoh = `*Asmaul Husna*`;
-      const anjuran = `
-    Dari Abu hurarirah radhiallahu anhu, Rasulullah Saw bersabda: "إِنَّ لِلَّهِ تَعَالَى تِسْعَةً وَتِسْعِينَ اسْمًا، مِائَةٌ إِلَّا وَاحِدًا، مَنْ أَحْصَاهَا دخل الجنة، وهو وتر يُحِبُّ الْوِتْرَ"
-    Artinya: "Sesungguhnya Allah mempunyai sembilan puluh sembilan nama, alias seratus kurang satu. Barang siapa yang menghitung-hitungnya, niscaya masuk surga; Dia Witir dan menyukai yang witir".`;
-    
-      const asmaulhusna = [
-          { index: 1, latin: "Ar Rahman", arabic: "الرَّحْمَنُ", translation_id: "مطلق صفت رحمت والا", translation_en: "The All Beneficent" },
-          { index: 2, latin: "Ar Rahiim", arabic: "الرَّحِيمُ", translation_id: "مطلق صفت شفقت والا", translation_en: "The Most Merciful" },
-          { index: 3, latin: "Al Malik", arabic: "الْمَلِكُ", translation_id: "مطلق صفت حکمرانی والا", translation_en: "The King, The Sovereign" },
-          { index: 4, latin: "Al Quddus", arabic: "الْقُدُّوسُ", translation_id: "مطلق صفت پاک", translation_en: "The Most Holy" },
-          { index: 5, latin: "As Salaam", arabic: "السَّلاَمُ", translation_id: "مطلق صفت سلامتی والا", translation_en: "Peace and Blessing" },
-          { index: 6, latin: "Al Mu’min", arabic: "الْمُؤْمِنُ", translation_id: "مطلق صفت امن دینے والا", translation_en: "The Guarantor" },
-          { index: 7, latin: "Al Muhaimin", arabic: "الْمُهَيْمِنُ", translation_id: "مطلق صفت نگہبان", translation_en: "The Guardian, the Preserver" },
-          { index: 8, latin: "Al ‘Aziiz", arabic: "الْعَزِيزُ", translation_id: "مطلق صفت عزت والا", translation_en: "The Almighty, the Self Sufficient" },
-          { index: 9, latin: "Al Jabbar", arabic: "الْجَبَّارُ", translation_id: "مطلق صفت طاقت والا", translation_en: "The Powerful, the Irresistible" },
-          { index: 10, latin: "Al Mutakabbir", arabic: "الْمُتَكَبِّرُ", translation_id: "مطلق صفت بڑائی والا", translation_en: "The Tremendous" },
-          { index: 11, latin: "Al Khaliq", arabic: "الْخَالِقُ", translation_id: "مطلق صفت خالق", translation_en: "The Creator" },
-          { index: 12, latin: "Al Baari’", arabic: "الْبَارِئُ", translation_id: "مطلق صفت بنانے والا", translation_en: "The Maker" },
-          { index: 13, latin: "Al Mushawwir", arabic: "الْمُصَوِّرُ", translation_id: "مطلق صفت شکل دینے والا", translation_en: "The Fashioner of Forms" },
-          { index: 14, latin: "Al Ghaffaar", arabic: "الْغَفَّارُ", translation_id: "مطلق صفت معاف کرنے والا", translation_en: "The Ever Forgiving" },
-          { index: 15, latin: "Al Qahhaar", arabic: "الْقَهَّارُ", translation_id: "مطلق صفت قاہر", translation_en: "The All Compelling Subduer" },
-          { index: 16, latin: "Al Wahhaab", arabic: "الْوَهَّابُ", translation_id: "مطلق صفت عطا کرنے والا", translation_en: "The Bestower" },
-          { index: 17, latin: "Ar Razzaaq", arabic: "الرَّزَّاقُ", translation_id: "مطلق صفت رزق دینے والا", translation_en: "The Ever Providing" },
-          { index: 18, latin: "Al Fattaah", arabic: "الْفَتَّاحُ", translation_id: "مطلق صفت رحمت کھولنے والا", translation_en: "The Opener, the Victory Giver" },
-          { index: 19, latin: "Al ‘Aliim", arabic: "اَلْعَلِيْمُ", translation_id: "مطلق صفت عالم", translation_en: "The All Knowing, the Omniscient" },
-          { index: 20, latin: "Al Qaabidh", arabic: "الْقَابِضُ", translation_id: "مطلق صفت تنگ کرنے والا", translation_en: "The Restrainer, the Straightener" },
-          { index: 21, latin: "Al Baasith", arabic: "الْبَاسِطُ", translation_id: "مطلق صفت پھیلانے والا", translation_en: "The Expander, the Munificent" },
-          { index: 22, latin: "Al Khaafidh", arabic: "الْخَافِضُ", translation_id: "مطلق صفت نیچا کرنے والا", translation_en: "The Abaser" },
-          { index: 23, latin: "Ar Raafi’", arabic: "الرَّافِعُ", translation_id: "مطلق صفت اونچا کرنے والا", translation_en: "The Exalter" },
-          { index: 24, latin: "Al Mu’izz", arabic: "الْمُعِزُّ", translation_id: "مطلق صفت عزت دینے والا", translation_en: "The Giver of Honor" },
-          { index: 25, latin: "Al Mudzil", arabic: "المُذِلُّ", translation_id: "مطلق صفت ذلت دینے والا", translation_en: "The Giver of Dishonor" },
-          { index: 26, latin: "Al Samii’", arabic: "السَّمِيعُ", translation_id: "مطلق صفت سننے والا", translation_en: "The All Hearing" },
-          { index: 27, latin: "Al Bashiir", arabic: "الْبَصِيرُ", translation_id: "مطلق صفت دیکھنے والا", translation_en: "The All Seeing" },
-          { index: 28, latin: "Al Hakam", arabic: "الْحَكَمُ", translation_id: "مطلق صفت فیصلے والا", translation_en: "The Judge, the Arbitrator" },
-          { index: 29, latin: "Al ‘Adl", arabic: "الْعَدْلُ", translation_id: "مطلق صفت عدل", translation_en: "The Utterly Just" },
-          { index: 30, latin: "Al Lathiif", arabic: "اللَّطِيفُ", translation_id: "مطلق صفت نرمی والا", translation_en: "The Subtly Kind" },
-          { index: 31, latin: "Al Khabiir", arabic: "الْخَبِيرُ", translation_id: "مطلق صفت رازوں کا جاننے والا", translation_en: "The All Aware" },
-          { index: 32, latin: "Al Haliim", arabic: "الْحَلِيمُ", translation_id: "مطلق صفت بردبار", translation_en: "The Forbearing, the Indulgent" },
-          { index: 33, latin: "Al ‘Azhiim", arabic: "الْعَظِيمُ", translation_id: "مطلق صفت عظیم", translation_en: "The Magnificent, the Infinite" },
-          { index: 34, latin: "Al Ghafuur", arabic: "الْغَفُورُ", translation_id: "مطلق صفت معاف کرنے والا", translation_en: "The All Forgiving" },
-          { index: 35, latin: "As Syakuur", arabic: "الشَّكُورُ", translation_id: "مطلق صفت شکرگزار", translation_en: "The Grateful" },
-          { index: 36, latin: "Al ‘Aliy", arabic: "الْعَلِيُّ", translation_id: "مطلق صفت اعلی", translation_en: "The Sublimely Exalted" },
-          { index: 37, latin: "Al Kabir", arabic: "الْكَبِيرُ", translation_id: "مطلق صفت بڑا", translation_en: "The All Great" },
-          { index: 38, latin: "Al Hafiz", arabic: "الْحَفِيظُ", translation_id: "مطلق صفت محفوظ کرنے والا", translation_en: "The Preserver" },
-          { index: 39, latin: "Al Muqit", arabic: "الْمُقيِت", translation_id: "مطلق صفت نگہبان", translation_en: "The Sustainer" },
-          { index: 40, latin: "Al Hasib", arabic: "الْحَسِيبُ", translation_id: "مطلق صفت حساب لینے والا", translation_en: "The Reckoner" },
-          { index: 41, latin: "Al Jaliil", arabic: "الْجَلِيلُ", translation_id: "مطلق صفت جلال والا", translation_en: "The Majestic" },
-          { index: 42, latin: "Al Kariim", arabic: "الْكَرِيمُ", translation_id: "مطلق صفت کرم والا", translation_en: "The Generous, the Esteemed" },
-          { index: 43, latin: "Al Raqiib", arabic: "الرَّقِيبُ", translation_id: "مطلق صفت نگران", translation_en: "The Watchful" },
-          { index: 44, latin: "Al Mujiib", arabic: "الْمُجِيبُ", translation_id: "مطلق صفت جواب دینے والا", translation_en: "The Responsive" },
-          { index: 45, latin: "Al Wasi’", arabic: "الْوَاسِعُ", translation_id: "مطلق صفت وسعت والا", translation_en: "The All-Encompassing" },
-          { index: 46, latin: "Al Haadi", arabic: "الْهَادِي", translation_id: "مطلق صفت ہدایت دینے والا", translation_en: "The Guide" },
-          { index: 47, latin: "Al Baadi’", arabic: "الْبَادِعُ", translation_id: "مطلق صفت سب سے پہلا", translation_en: "The Incomparable" },
-          { index: 48, latin: "Al Baaqi", arabic: "الْبَاقِي", translation_id: "مطلق صفت باقی", translation_en: "The Everlasting" },
-          { index: 49, latin: "Al Waarith", arabic: "الْوَارِثُ", translation_id: "مطلق صفت وارث", translation_en: "The Inheritor" },
-          { index: 50, latin: "Ar Rashid", arabic: "الرَّشِيدُ", translation_id: "مطلق صفت ہدایت دینے والا", translation_en: "The Righteous Teacher" },
-          { index: 51, latin: "As Sabur", arabic: "الصَّبُورُ", translation_id: "مطلق صفت صابر", translation_en: "The Patient" },
-          { index: 52, latin: "Al Mu’izz", arabic: "الْمُعِزُّ", translation_id: "مطلق صفت عزت دینے والا", translation_en: "The Giver of Honor" },
-          { index: 53, latin: "Al Muthir", arabic: "الْمُثِيرُ", translation_id: "مطلق صفت جوش دلانے والا", translation_en: "The Infuser of Enthusiasm" },
-          { index: 54, latin: "Al Mu’min", arabic: "الْمُؤْمِنُ", translation_id: "مطلق صفت ایمان دینے والا", translation_en: "The Giver of Faith" },
-          { index: 55, latin: "Al Qariib", arabic: "الْقَرِيبُ", translation_id: "مطلق صفت قریب", translation_en: "The Near" },
-          { index: 56, latin: "Al Mu’min", arabic: "الْمُؤْمِنُ", translation_id: "مطلق صفت ایمان دینے والا", translation_en: "The Giver of Faith" },
-          { index: 57, latin: "Al Qawiyy", arabic: "الْقَوِيُّ", translation_id: "مطلق صفت طاقتور", translation_en: "The All-Strong" },
-          { index: 58, latin: "Al Qadeer", arabic: "الْقَادِرُ", translation_id: "مطلق صفت قادر", translation_en: "The Omnipotent" },
-          { index: 59, latin: "Al Haqq", arabic: "الْحَقُّ", translation_id: "مطلق صفت حق", translation_en: "The Absolute Truth" },
-          { index: 60, latin: "Al Hakeem", arabic: "الْحَكِيمُ", translation_id: "مطلق صفت حکیم", translation_en: "The All Wise" },
-          { index: 61, latin: "Al Wahhab", arabic: "الْوَهَّابُ", translation_id: "مطلق صفت عطا کرنے والا", translation_en: "The Supreme Bestower" },
-          { index: 62, latin: "Al Jalil", arabic: "الْجَلِيلُ", translation_id: "مطلق صفت جلال والا", translation_en: "The Majestic" },
-          { index: 63, latin: "Al Karim", arabic: "الْكَرِيمُ", translation_id: "مطلق صفت کرم والا", translation_en: "The Generous" },
-          { index: 64, latin: "Al Khabeer", arabic: "الْخَبِيرُ", translation_id: "مطلق صفت باخبر", translation_en: "The All-Aware" },
-          { index: 65, latin: "Al Latif", arabic: "الْلَطِيفُ", translation_id: "مطلق صفت لطیف", translation_en: "The Subtle" },
-          { index: 66, latin: "Al Qabid", arabic: "الْقَابِضُ", translation_id: "مطلق صفت تنگ کرنے والا", translation_en: "The Withholder" },
-          { index: 67, latin: "Al Basit", arabic: "الْبَاسِطُ", translation_id: "مطلق صفت پھیلانے والا", translation_en: "The Extender" },
-          { index: 68, latin: "Al Khafid", arabic: "الْخَافِضُ", translation_id: "مطلق صفت کم کرنے والا", translation_en: "The Reducer" },
-          { index: 69, latin: "Ar Rafi", arabic: "الرَّافِعُ", translation_id: "مطلق صفت بلند کرنے والا", translation_en: "The Exalter" },
-          { index: 70, latin: "Al Mu’izz", arabic: "الْمُعِزُّ", translation_id: "مطلق صفت عزت دینے والا", translation_en: "The Honor Giver" },
-          { index: 71, latin: "Al Mudzil", arabic: "الْمُذِلُّ", translation_id: "مطلق صفت ذلت دینے والا", translation_en: "The Dishonor Giver" },
-          { index: 72, latin: "Al Sami", arabic: "الْسَمِيعُ", translation_id: "مطلق صفت سننے والا", translation_en: "The All-Hearing" },
-          { index: 73, latin: "Al Baseer", arabic: "الْبَصِيرُ", translation_id: "مطلق صفت دیکھنے والا", translation_en: "The All-Seeing" },
-          { index: 74, latin: "Al Hakam", arabic: "الْحَكَمُ", translation_id: "مطلق صفت حکمران", translation_en: "The Judge" },
-          { index: 75, latin: "Al Adl", arabic: "الْعَدْلُ", translation_id: "مطلق صفت انصاف کرنے والا", translation_en: "The Just" },
-          { index: 76, latin: "Al Latif", arabic: "الْلَطِيفُ", translation_id: "مطلق صفت نرمی والا", translation_en: "The Subtle" },
-          { index: 77, latin: "Al Khabir", arabic: "الْخَبِيرُ", translation_id: "مطلق صفت باخبر", translation_en: "The All-Aware" },
-          { index: 78, latin: "Al Halim", arabic: "الْحَلِيمُ", translation_id: "مطلق صفت بردبار", translation_en: "The Forbearing" },
-          { index: 79, latin: "Al Azim", arabic: "الْعَظِيمُ", translation_id: "مطلق صفت عظیم", translation_en: "The Magnificent" },
-          { index: 80, latin: "Al Ghafur", arabic: "الْغَفُورُ", translation_id: "مطلق صفت معاف کرنے والا", translation_en: "The Forgiving" },
-          { index: 81, latin: "Ash Shakur", arabic: "الْشَاكُورُ", translation_id: "مطلق صفت شکرگزار", translation_en: "The Appreciative" },
-          { index: 82, latin: "Al Ali", arabic: "الْعَلِيُّ", translation_id: "مطلق صفت اعلی", translation_en: "The Most High" },
-          { index: 83, latin: "Al Kabir", arabic: "الْكَبِيرُ", translation_id: "مطلق صفت بڑا", translation_en: "The Great" },
-          { index: 84, latin: "Al Hafiz", arabic: "الْحَفِيظُ", translation_id: "مطلق صفت محفوظ کرنے والا", translation_en: "The Preserver" },
-          { index: 85, latin: "Al Muqit", arabic: "الْمُقيِت", translation_id: "مطلق صفت خوراک دینے والا", translation_en: "The Sustainer" },
-          { index: 86, latin: "Al Hasib", arabic: "الْحَسِيبُ", translation_id: "مطلق صفت حساب لینے والا", translation_en: "The Reckoner" },
-          { index: 87, latin: "Al Jalil", arabic: "الْجَلِيلُ", translation_id: "مطلق صفت جلال والا", translation_en: "The Majestic" },
-          { index: 88, latin: "Al Karim", arabic: "الْكَرِيمُ", translation_id: "مطلق صفت کرم والا", translation_en: "The Generous" },
-          { index: 89, latin: "Al Raqib", arabic: "الرَّقِيبُ", translation_id: "مطلق صفت نگران", translation_en: "The Watchful" },
-          { index: 90, latin: "Al Mujib", arabic: "الْمُجِيبُ", translation_id: "مطلق صفت جواب دینے والا", translation_en: "The Responsive" },
-          { index: 91, latin: "Al Wasi'", arabic: "الْوَاسِعُ", translation_id: "مطلق صفت وسعت والا", translation_en: "The All-Encompassing" },
-          { index: 92, latin: "Al Haadi", arabic: "الْهَادِي", translation_id: "مطلق صفت ہدایت دینے والا", translation_en: "The Guide" },
-          { index: 93, latin: "Al Baadi'", arabic: "الْبَادِعُ", translation_id: "مطلق صفت سب سے پہلا", translation_en: "The Incomparable" },
-          { index: 94, latin: "Al Baqi", arabic: "الْبَاقِي", translation_id: "مطلق صفت باقی", translation_en: "The Everlasting" },
-          { index: 95, latin: "Al Warith", arabic: "الْوَارِثُ", translation_id: "مطلق صفت وارث", translation_en: "The Inheritor" },
-          { index: 96, latin: "Ar Rashid", arabic: "الرَّشِيدُ", translation_id: "مطلق صفت ہدایت دینے والا", translation_en: "The Righteous Teacher" },
-          { index: 97, latin: "As Sabur", arabic: "الصَّبُورُ", translation_id: "مطلق صفت صابر", translation_en: "The Patient" },
-          { index: 98, latin: "Al Mu’izz", arabic: "الْمُعِزُّ", translation_id: "مطلق صفت عزت دینے والا", translation_en: "The Giver of Honor" },
-          { index: 99, latin: "Al Muthir", arabic: "الْمُثِيرُ", translation_id: "مطلق صفت جوش دلانے والا", translation_en: "The Infuser of Enthusiasm" }
-      ];
-    
-      const result = asmaulhusna.map(a => `\n${a.index}. ${a.latin}: ${a.translation_en} (${a.translation_id})\n   Arabic: ${a.arabic}\n   `).join("");
-      await XliconBotInc.sendText(m.chat, contoh + anjuran + result);
-    }
-      break
-    
-      case 'duas': {
-        if (!q) return replygcxlicon(`*Where is the text*\n\n*𝙴xample usage*\n*${prefix + command} <language id>*\n*${prefix + command} en*`);
-    
-        // Read and parse the JSON file
-        let { result } = JSON.parse(fs.readFileSync('./lib/tahlil.json', 'utf-8'));
-    
-        // Extract language code from command arguments
-        let lang = args[0] || 'en';
-    
-        // Translate and map the result to create captions
-        let caption = await Promise.all(result.map(async (v, i) => {
-            try {
-                // Translate title and translation to the specified language
-                let translatedTitleResponse = await translate(v.title, { to: lang, autoCorrect: true }).catch(err => {
-                    console.error(`Error translating title: ${err}`);
-                    return { text: v.title };
-                });
-                let translatedTitle = translatedTitleResponse.text || v.title;
-    
-                let translatedTranslationResponse = await translate(v.translation, { to: lang, autoCorrect: true }).catch(err => {
-                    console.error(`Error translating translation: ${err}`);
-                    return { text: v.translation };
-                });
-                let translatedTranslation = translatedTranslationResponse.text || v.translation;
-    
-                return `*${i + 1}.* ${translatedTitle}
-    
-    ❃ Arabic :
-    ${v.arabic}
-    
-    ❃ Translate :
-    ${translatedTranslation}
-    `.trim();
-            } catch (error) {
-                console.error(`Error translating text: ${error}`);
-                return `*${i + 1}.* ${v.title}
-    
-    ❃ Arabic :
-    ${v.arabic}
-    
-    ❃ Translate :
-    ${v.translation}
-    `.trim();
-            }
-        })).then(captions => captions.join('\n\n'));
-         // URL for each image (replace with actual URLs or dynamic URLs)
-      const imageUrl = `https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png`;
-    
-        // Send the caption along with an image
-        await XliconBotInc.sendMessage(m.chat, {
-            image: { url: imageUrl }, // Image URL
-            caption: caption // The translated text content
-        });
-    }
-    break;
-    
-    case 'namaz': {
-      const namazData = {
-        "result": [
-          {
-            "id": 1,
-            "name": "Opening Takbir",
-            "arabic": "اللَّهُ أَكْبَرُ كَبِيرًا وَالْحَمْدُ لِلَّهِ كَثِيرًا وَسُبْحَانَ اللَّهِ بُكْرَةً وَأَصِيلاً , إِنِّى وَجَّهْتُ وَجْهِىَ لِلَّذِى فَطَرَ السَّمَوَاتِ وَالأَرْضَ حَنِيفًا وَمَا أَنَا مِنَ الْمُشْرِكِينَ إِنَّ صَلاَتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ الْعَالَمِينَ لاَ شَرِيكَ لَهُ وَبِذَلِكَ أُمِرْتُ وَأَنَا أَوَّلُ الْمُسْلِمِينَ",
-            "latin": "Alloohu akbar kabiirow wal hamdu lillaahi katsiiroo wasubhaanalloohi bukrotaw wa-ashiilaa, Innii wajjahtu wajhiya lilladzii fathoros samaawaati wal ardlo haniifaa wamaa ana minal musyrikiin. Inna sholaatii wa nusukii wamahyaa wa mamaatii lillaahi robbil 'aalamiin. Laa syariikalahu wa bidzaalika umirtu wa ana awwalul muslimiin",
-            "translation": "Allah is the Greatest, with the greatest greatness. All praise is due to Allah in abundance. Glory be to Allah in the morning and evening. Indeed, I direct my face to Allah who created the heavens and the earth, being upright and not of those who associate others with Him. Indeed, my prayer, my rites of worship, my life, and my death are for Allah, Lord of the Worlds. There is no partner for Him. And with this, I am commanded, and I am the first of the Muslims."
-          },
-          {
-            "id": 2,
-            "name": "Al-Fatihah",
-            "arabic": "بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ ﴿١﴾الْحَمْدُ لِلَّـهِ رَبِّ الْعَالَمِينَ ﴿٢﴾ الرَّحْمَـٰنِ الرَّحِيمِ ﴿٣﴾ مَالِكِ يَوْمِ الدِّينِ ﴿٤﴾ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴿٥﴾ اهْدِنَاالصِّرَاطَ الْمُسْتَقِيمَ ﴿٦﴾ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ﴿٧",
-            "latin": "1. Bismillahirrahmanirrahim, 2. Alhamdulillahi rabbil alamin, 3. Arrahmaanirrahiim, 4. Maaliki yaumiddiin, 5. Iyyaka nabudu waiyyaaka nastaiin, 6. Ihdinashirratal mustaqim, 7. shiratalladzina an’amta alaihim ghairil maghduubi alaihim waladhaalin",
-            "translation": "1. In the name of Allah, the Most Gracious, the Most Merciful, 2. Praise be to Allah, Lord of the Worlds, 3. The Most Gracious, the Most Merciful, 4. Master of the Day of Judgment, 5. You alone we worship, and You alone we ask for help, 6. Guide us to the straight path, 7. The path of those who have received Your grace; not the path of those who have brought down wrath upon themselves, nor of those who have gone astray."
-          },
-          {
-            "id": 3,
-            "name": "Bowing (Ruku)",
-            "arabic": "(3x) سُبْحَانَ رَبِّيَ الْعَظِيْمِ وَبِحَمْدِهِ",
-            "latin": "Subhana Rabbiyal Adzimi Wabihamdih (3x)",
-            "translation": "Glory is to my Lord, the Most Great, and praise be to Him."
-          },
-          {
-            "id": 4,
-            "name": "Prostration (Sujud)",
-            "arabic": "(3x) سُبْحَانَ رَبِّىَ الْأَعْلَى وَبِحَمْدِهِ",
-            "latin": "Subhaana robbiyal a'la wabihamdih (3x)",
-            "translation": "Glory is to my Lord, the Most High, and praise be to Him."
-          },
-          {
-            "id": 5,
-            "name": "Sitting Between Two Prostrations",
-            "arabic": "رَبِّ اغْفِرْلِيْ وَارْحَمْنِيْ وَاجْبُرْنِيْ وَارْفَعْنِيْ وَارْزُقْنِيْ وَاهْدِنِيْ وَعَافِنِيْ وَاعْفُ عَنِّيْ",
-            "latin": "Rabbighfirli Warhamni Wajburnii Warfaknii Wazuqnii Wahdinii Wa'aafinii Wa'fuannii",
-            "translation": "O Allah, forgive my sins, have mercy on me, and remedy my shortcomings. Elevate my status, provide for me, guide me, grant me health, and pardon me."
-          },
-          {
-            "id": 6,
-            "name": "Sitting for the Initial Tashahhud",
-            "arabic": "اَلتَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ ِللهِ، السَّلاَمُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِاللهِ الصَّالِحِيْنَ، أَشْهَدُ اَنْ لآ إِلَهَ إِلاَّاللهُ وَاَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهُ، اَللهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ",
-            "latin": "Attahiyyaatul mubaarokaatush sholawaatuth thoyyibaatu lillaah. Assalaamualaika ayyuhan nabiyyu wa rohmatulloohi wa barokaatuh. Assalaaamualainaa wa alaa ibaadillaahish shoolihiin. Asyhadu allaa ilaaha illallooh wa asyhadu anna Muhammadar rosuulullooh. Allahummasholli ala Sayyidina Muhammad",
-            "translation": "All greetings, blessings, prayers, and good things are for Allah. Peace be upon you, O Prophet, and the mercy and blessings of Allah. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no deity except Allah, and I bear witness that Muhammad is the Messenger of Allah. O Allah, send blessings upon our master Muhammad."
-          },
-          {
-            "id": 7,
-            "name": "Sitting for the Final Tashahhud",
-            "arabic": "اَلتَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ ِللهِ، السَّلاَمُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِاللهِ الصَّالِحِيْنَ، أَشْهَدُ اَنْ لآ إِلَهَ إِلاَّاللهُ وَاَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهُ، اَللهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى سَيِّدِنَا اِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِنَا اِبْرَاهِيْمَ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا بَرَكْتَ عَلَى سَيِّدِنَا اِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِنَا اِبْرَاهِيْمَ فِى الْعَالَمِيْنَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ",
-            "latin": "Attahiyyaatul mubaarokaatush sholawaatuth thoyyibaatu lillaah. Assalaamualaika ayyuhan nabiyyu wa rohmatulloohi wa barokaatuh. Assalaaamualainaa wa alaa ibaadillaahish shoolihiin. Asyhadu allaa ilaaha illallooh wa asyhadu anna Muhammadar rosuulullooh. Allahumma Shalli Ala Sayyidina Muhammad Wa Ala Ali Sayyidina Muhammad. Kama Shollaita Ala Sayyidina Ibrahim wa alaa aali sayyidina Ibrahim, wabaarik ala Sayyidina Muhammad Wa Alaa Ali Sayyidina Muhammad, Kama barokta alaa Sayyidina Ibrahim wa alaa ali Sayyidina Ibrahim, Fil aalamiina innaka hamiidummajid",
-            "translation": "All greetings, blessings, and good prayers are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no deity except Allah, and I bear witness that Muhammad is the Messenger of Allah. O Allah, send blessings upon our master Muhammad and upon the family of our master Muhammad, as You sent blessings upon our master Ibrahim and upon the family of our master Ibrahim. And bless our master Muhammad and the family of our master Muhammad as You blessed our master Ibrahim and the family of our master Ibrahim throughout the worlds. Verily, You are Praiseworthy, Glorious."
-          },
-          {
-            "id": 8,
-            "name": "Salam",
-            "arabic": "اَلسَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ",
-            "latin": "Assalamualaikum Warohmatullahi Wabarokatuh",
-            "translation": "Peace be upon you and Allah's mercy and blessings."
-          }
-        ]
-      };
-    
-      // Generate the message text
-      let captionText = namazData.result.map((v, i) => 
-        `*${i + 1}. ${v.name}*\n` +
-        `*Arabic:* ${v.arabic}\n` +
-        `*Latin:* ${v.latin}\n` +
-        `*Translation:* _${v.translation}_`
-      ).join('\n\n');
-    
-      let introduction = `*「 Namaz Prayers 」*\n\n`;
-      let finalMessage = `${introduction}${captionText}\n\n*Image of Namaz:* [Insert Image URL or Attachment Here]`;
-       // URL for each image (replace with actual URLs or dynamic URLs)
-      const imageUrl = `https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png`;
-    
-      // Send the message
-       await XliconBotInc.sendMessage(m.chat, {
-            image: { url: imageUrl },
-            caption: finalMessage
-        });
-    }
-    break;
-    
-    
-    case 'masnoonduas': {
-        // Read and parse the JSON file
-        let src = JSON.parse(fs.readFileSync('./lib/doaharian.json', 'utf-8'));
-    
-        // Delay function to throttle requests
-        function delay(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-    
-        // Translation function with retry logic
-        async function translateText(text, targetLang) {
-            let retries = 5;
-            while (retries > 0) {
-                try {
-                    await delay(500); // Delay between requests
-                    let result = await translate(text, { to: targetLang });
-                    return result.text;
-                } catch (error) {
-                    console.error('Translation error:', error);
-                    if (error.message.includes('TooManyRequestsError')) {
-                        await delay(10000); // Wait for 10 seconds before retrying
-                    } else {
-                        return text; // Return original text if translation fails
-                    }
-                    retries -= 1;
-                }
-            }
-            return text; // Return original text if all retries fail
-        }
-    
-        // Create the caption with translations
-        let caption = await Promise.all(src.map(async (v, i) => {
-            // Translate title and translation to English
-            let translatedTitle = await translateText(v.title, 'en');
-            let translatedTranslation = await translateText(v.translation, 'en');
-    
-            return `
-    *${i + 1}.* ${translatedTitle}
-    
-    ❃ Latin :
-    ${v.latin}
-    
-    ❃ Arabic :
-    ${v.arabic}
-    
-    ❃ Translate :
-    ${translatedTranslation}
-    `.trim();
-        }));
-    
-        // Join all captions
-        let captionText = caption.join('\n\n');
-    
-        // URL for the image (replace with actual image URL if necessary)
-        const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Change this if needed
-    
-        // Send the caption along with the image
-        await XliconBotInc.sendMessage(m.chat, {
-            image: { url: imageUrl }, // Image URL
-            caption: captionText // The translated text content
-        });
-    }
-    break;
-    
-    
-    
-    case 'ayatalkursi': {
-      let caption = `
-    *「 Ayat Kursi 」*
-    اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ
-    “Alloohu laa ilaaha illaa huwal hayyul qoyyuum, laa ta’khudzuhuu sinatuw walaa naum. Lahuu maa fissamaawaati wa maa fil ardli man dzal ladzii yasyfa’u ‘indahuu illaa biidznih, ya’lamu maa baina aidiihim wamaa kholfahum wa laa yuhiithuuna bisyai’im min ‘ilmihii illaa bimaa syaa’ wasi’a kursiyyuhus samaawaati wal ardlo walaa ya’uuduhuu hifdhuhumaa wahuwal ‘aliyyul ‘adhiim.”
-    
-    ترجمہ:
-    اللہ، کوئی معبود نہیں سوائے اس کے، جو زندہ ہے، دائمی اور مسلسل اپنے مخلوقات کی دیکھ بھال کرتا ہے؛ نہ اونگھتا ہے اور نہ ہی سوتا ہے۔ جو کچھ آسمانوں اور زمین میں ہے، وہ سب اللہ کا ہے۔ اللہ کے پاس شفاعت کرنے کا اختیار کسی کو بھی نہیں، سوائے اس کے کہ اللہ اجازت دے۔
-    اللہ جانتا ہے جو کچھ ان کے سامنے ہے اور جو کچھ ان کے پیچھے ہے، اور وہ اللہ کے علم کے کسی بھی چیز کو نہیں جان سکتے سوائے اس کے جو اللہ چاہے۔ اللہ کی کرسی آسمانوں اور زمین کو محیط ہے، اور اللہ کو ان دونوں کو محفوظ رکھنے میں کوئی بوجھ نہیں محسوس ہوتا، اور اللہ بہت بلند اور عظیم ہے۔
-    (QS. Al Baqarah: 255)
-      `.trim();
-    
-      // URL for the image (replace with your preferred image URL)
-      const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Update as needed
-    
-      // Send the caption with the image
-      await XliconBotInc.sendMessage(m.chat, {
-        image: { url: imageUrl }, // Image URL
-        caption: caption // The caption content
-      });
-    }
-    break;
-    
-    case 'niyatnamaz': {
-      if (!q) return replygcxlicon(`Usage Example:\nniyatnamaz Subuh`);
-    
-      // Array containing the prayer intentions
-      const niyatnamaz = [
-        {
-          solat: "subuh",
-          latin: "Ushalli fardhosh shubhi rok'ataini mustaqbilal qiblati adaa-an lillaahi ta'aala",
-          arabic: "اُصَلِّى فَرْضَ الصُّبْحِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى",
-          translation_en: "I intend to perform the Fardh of Subuh (Fajr) with two raka'ats facing the Qibla for the sake of Allah Ta'ala",
-        },
-        {
-          solat: "maghrib",
-          latin: "Ushalli fardhol maghribi tsalaata raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala",
-          arabic: "اُصَلِّى فَرْضَ الْمَغْرِبِ ثَلاَثَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى",
-          translation_en: "I intend to perform the Fardh of Maghrib with three raka'ats facing the Qibla for the sake of Allah Ta'ala",
-        },
-        {
-          solat: "dzuhur",
-          latin: "Ushalli fardhodl dhuhri arba'a raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala",
-          arabic: "اُصَلِّى فَرْضَ الظُّهْرِاَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى",
-          translation_en: "I intend to perform the Fardh of Dzuhur (Dhuhr) with four raka'ats facing the Qibla for the sake of Allah Ta'ala",
-        },
-        {
-          solat: "isha",
-          latin: "Ushalli fardhol 'isyaa-i arba'a raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala",
-          arabic: "صَلِّى فَرْضَ الْعِشَاءِ اَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى",
-          translation_en: "I intend to perform the Fardh of Isha with four raka'ats facing the Qibla for the sake of Allah Ta'ala",
-        },
-        {
-          solat: "ashar",
-          latin: "Ushalli fardhol 'ashri arba'a raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala",
-          arabic: "صَلِّى فَرْضَ الْعَصْرِاَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى",
-          translation_en: "I intend to perform the Fardh of Ashar (Asr) with four raka'ats facing the Qibla for the sake of Allah Ta'ala",
-        }
-      ];
-    
-      // Convert user input to lowercase for matching
-      let text = q.toLowerCase() || '';
-      let data = niyatnamaz.find(v => v.solat === text);
-    
-      // If the requested prayer is not found
-      if (!data) {
-        return replygcxlicon(`Command ${text} Not Found\n\nList of 5 Daily Prayers:\n• Subuh\n• Maghrib\n• Dzuhur\n• Isha\n• Ashar`);
-      }
-    
-      // Format the response
-      const responseText = `
-    _*Intention for the ${text.charAt(0).toUpperCase() + text.slice(1)} Prayer*_
-    
-    *Arabic:* ${data.arabic}
-    
-    *Latin:* ${data.latin}
-    
-    *Translation:* ${data.translation_en}`.trim();
-    
-      // URL for the image (replace with your preferred image URL)
-      const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Update as needed
-    
-      // Send the response with the image and caption using replygcxlicon
-      await replygcxlicon(responseText);
-      
-      // Send the image separately as the last reply
-      await XliconBotInc.sendMessage(m.chat, {
-        image: { url: imageUrl }, // Image URL
-        caption: 'Here is the image related to your prayer intention.' // A simple caption for the image
-      });
-    }
-    break;
-    
-    
-    case 'quotesislami': {
-      // Array of Islamic quotes
-      const islami = [
-        { id: "1", arabic: "مَنْ سَارَ عَلىَ الدَّرْبِ وَصَلَ", translation_en: "Whoever walks the path will reach (their goal)." },
-        { id: "2", arabic: "مَنْ صَبَرَ ظَفِرَ", translation_en: "Whoever is patient will be successful." },
-        { id: "3", arabic: "مَنْ جَدَّ وَجَـدَ", translation_en: "Whoever strives will achieve (success)." },
-        { id: "4", arabic: "جَالِسْ أَهْلَ الصِّدْقِ وَالوَفَاءِ", translation_en: "Associate with those who are truthful and trustworthy." },
-        { id: "5", arabic: "مَنْ قَلَّ صِدْقُهُ قَلَّ صَدِيْقُهُ", translation_en: "Whoever has little honesty will have few friends." },
-        { id: "6", arabic: "مَوَدَّةُ الصَّدِيْقِ تَظْهَرُ وَقْتَ الضِّيْقِ", translation_en: "The affection of a friend shows in times of hardship." },
-        { id: "7", arabic: "الصَّبْرُ يُعِيْنُ عَلَى كُلِّ عَمَلٍ", translation_en: "Patience helps with every task." },
-        { id: "8", arabic: "وَمَا اللَّذَّةُ إِلاَّ بَعْدَ التَّعَبِ", translation_en: "There is no pleasure except after effort." },
-        { id: "9", arabic: "جَرِّبْ وَلاَحِظْ تَكُنْ عَارِفًا", translation_en: "Try and observe, and you will gain knowledge." },
-        { id: "10", arabic: "بَيْضَةُ اليَوْمِ خَيْرٌ مِنْ دَجَاجَةِ الغَدِ", translation_en: "Today's egg is better than tomorrow's chicken." },
-        { id: "11", arabic: "أُطْلُبِ الْعِلْمَ مِنَ الْمَهْدِ إِلَى الَّلحْدِ", translation_en: "Seek knowledge from the cradle to the grave." },
-        { id: "12", arabic: "الوَقْتُ أَثْمَنُ مِنَ الذَّهَبِ", translation_en: "Time is more valuable than gold." },
-        { id: "13", arabic: "لاَ خَيْرَ فيِ لَذَّةٍ تَعْقِبُ نَدَماً", translation_en: "There is no good in pleasure that is followed by regret." },
-        { id: "14", arabic: "أَخِي لَنْ تَنَالَ العِلْمَ إِلاَّ بِسِتَّةٍ سَأُنْبِيْكَ عَنْ تَفْصِيْلِهَا بِبَيَانٍ: ذَكَاءٌ وَحِرْصٌ وَاجْتِهَادٌ وَدِرْهَمٌ وَصُحْبَةُ أُسْتَاذٍ وَطُوْلُ زَمَانٍ", translation_en: "My brother, you will not attain knowledge except through six things: intelligence, eagerness, diligence, money, companionship with a teacher, and a long period of time." },
-        { id: "15", arabic: "لاَ تَكُنْ رَطْباً فَتُعْصَرَ وَلاَ يَابِسًا فَتُكَسَّرَ", translation_en: "Do not be soft so that you are easily squeezed, nor hard so that you are easily broken." },
-        { id: "16", arabic: "لِكُلِّ مَقَامٍ مَقَالٌ وَلِكُلِّ مَقَالٍ مَقَامٌ", translation_en: "Every place has its own speech, and every speech has its own place." },
-        { id: "17", arabic: "خَيْرُ النَّاسِ أَحْسَنُهُمْ خُلُقاً وَأَنْفَعُهُمْ لِلنَّاسِ", translation_en: "The best of people are those who have the best manners and are the most beneficial to others." },
-        { id: "18", arabic: "خَيْرُ جَلِيْسٍ في الزّمانِ كِتابُ", translation_en: "The best companion in any era is a book." },
-        { id: "19", arabic: "مَنْ يَزْرَعْ يَحْصُدْ", translation_en: "Whoever plants will harvest." },
-        { id: "20", arabic: "لَوْلاَ العِلْمُ لَكَانَ النَّاسُ كَالبَهَائِمِ", translation_en: "If not for knowledge, people would be like animals." },
-        { id: "21", arabic: "سَلاَمَةُ الإِنْسَانِ فيِ حِفْظِ اللِّسَانِ", translation_en: "The safety of a person lies in the protection of their tongue (words)." },
-        { id: "22", arabic: "الرِّفْقُ بِالضَّعِيْفِ مِنْ خُلُقِ الشَّرِيْفِ", translation_en: "Being gentle with the weak is a mark of noble character." },
-        { id: "23", arabic: "وَعَامِلِ النَّاسَ بِمَا تُحِبُّ مِنْهُ دَائِماً", translation_en: "Treat people in a way that you would like to be treated." },
-        { id: "24", arabic: "لَيْسَ الجَمَالُ بِأَثْوَابٍ تُزَيِّنُنُا إِنَّ الجَمَالَ جمَاَلُ العِلْمِ وَالأَدَبِ", translation_en: "Beauty is not in the clothes that adorn us, but in knowledge and manners." },
-        { id: "25", arabic: "مَنْ أَعاَنَكَ عَلىَ الشَّرِّ ظَلَمَكَ", translation_en: "Whoever helps you in wrongdoing has wronged you." }
-      ];
-    
-      // Select a random quote
-      const randomIndex = Math.floor(Math.random() * islami.length);
-      const randomQuote = islami[randomIndex];
-      const { arabic, translation_en } = randomQuote;
-    
-      // Format the response text
-      const responseText = `${arabic}\n\n${translation_en}`;
-    
-      // Now send the image with the last reply
-      const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-      await XliconBotInc.sendMessage(m.chat, {
-        image: { url: imageUrl },
-        caption: responseText
-      });
-    }
-    break;
-    
-    case 'assalamualaikum': {
-      const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-      await XliconBotInc.sendMessage(m.chat, {
-        image: { url: imageUrl },
-        caption: "Waalaikumsalam Wa Rehmatullahi Wa Barakatuhu"
-      });
-    }
-    break;
-    
-    
-    
-    case 'hadith': {
-      const apiUrl = 'https://api.lolhuman.xyz/api/hadits/detail/Sunan_Tirmidzi/1769?apikey=dcb4198762eb793a386a9c1c';
-    
-      try {
-        // Fetch Hadith details from the API
-        let response = await fetch(apiUrl);
-        let data = await response.json();
-    
-        if (data.status !== 200) {
-          return await XliconBotInc.sendText(m.chat, "Failed to fetch Hadith details.");
-        }
-    
-        // Extract the Hadith text and ID
-        let hadith = data.result['1'];
-        let hadithText = hadith.nass;
-    
-        // Delay function to throttle requests
-        function delay(ms) {
-          return new Promise(resolve => setTimeout(resolve, ms));
-        }
-    
-        // Translate function with retry logic
-        async function translateText(text, targetLang) {
-          let retries = 5;
-          while (retries > 0) {
-            try {
-              await delay(500); // Delay between requests
-              let result = await translate(text, { to: targetLang });
-              return result.text;
-            } catch (error) {
-              console.error('Translation error:', error);
-              if (error.message.includes('TooManyRequestsError')) {
-                await delay(10000); // Wait for 10 seconds before retrying
-              } else {
-                return text; // Return original text if translation fails
-              }
-              retries -= 1;
-            }
-          }
-          return text; // Return original text if all retries fail
-        }
-    
-        // Translate the Hadith text to Urdu
-        let translatedHadith = await translateText(hadithText, 'ur');
-    
-        // Create the caption with translations
-        let captionText = `
-    *Hadith ID:* ${hadith.id}
-    
-    ❃ Original Text:
-    ${hadithText}
-    
-    ❃ Translated Text (Urdu):
-    ${translatedHadith}
-    `.trim();
-    
-        // Send the image with caption directly
-        const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-        await XliconBotInc.sendMessage(m.chat, {
-          image: { url: imageUrl },
-          caption: captionText // Directly use captionText here
-        });
-    
-      } catch (error) {
-        console.error('Error fetching or processing Hadith:', error);
-        return await XliconBotInc.sendText(m.chat, "An error occurred while fetching the Hadith.");
-      }
-    }
-    break;
-    
-    
-    case 'prophetname': {
-      try {
-        // Define the API URL
-        const apiUrl = `${global.api}islamic/prophet-names?apikey=${global.id}`;
-    
-        // Fetch data from the API
-        let response = await fetch(apiUrl);
-        let data = await response.json();
-    
-        // Check if the request was successful
-        if (data.status !== 200) {
-          return await XliconBotInc.sendText(m.chat, "Failed to fetch Prophet's name.");
-        }
-    
-        // Extract the Prophet's name
-        let prophetName = data.result.name;
-    
-        // Create the message content
-        let captionText = `
-    *Prophet's Name:*
-    ${prophetName}
-    `.trim();
-    
-        // Now send the image with the last reply
-        const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-        await XliconBotInc.sendMessage(m.chat, {
-          image: { url: imageUrl },
-          caption: captionText // Directly use captionText here
-        });
-    
-      } catch (error) {
-        console.error('Error fetching Prophet\'s name:', error);
-        return await XliconBotInc.sendText(m.chat, "An error occurred while fetching the Prophet's name.");
-      }
-    }
-    break;
-    
-            
-    case 'prayertime': {
-      // Extract the city name from the command input
-      let city = m.text.split(' ').slice(1).join(' ');
-      if (!city) {
-          return await replygcxlicon("Please provide a city name, e.g., `prayertime Lahore`.");
-      }
-    
-      // Define the API URL with the city parameter using global variables
-      const apiUrl = `${global.api}islamic/prayer-times?city=${encodeURIComponent(city)}&apikey=${global.id}`;
-    
-      try {
-          // Fetch data from the API
-          let response = await fetch(apiUrl);
-          let data = await response.json();
-    
-          // Check if the request was successful
-          if (data.status !== 200 || data.result.status_valid !== 1) {
-              return await replygcxlicon("Failed to fetch prayer times. Please check the city name and try again.");
-          }
-    
-          // Assign emojis for each prayer time
-          let fajrEmoji = '🌅';
-          let dhuhrEmoji = '🌞';
-          let asrEmoji = '🌤';
-          let maghribEmoji = '🌇';
-          let ishaEmoji = '🌙';
-    
-          // Extract relevant data
-          let cityName = data.result.city;
-          let method = data.result.prayer_method_name;
-          let items = data.result.items[0];
-          let fajr = fajrEmoji + ' Fajr: ' + items.fajr;
-          let dhuhr = dhuhrEmoji + ' Dhuhr: ' + items.dhuhr;
-          let asr = asrEmoji + ' Asr: ' + items.asr;
-          let maghrib = maghribEmoji + ' Maghrib: ' + items.maghrib;
-          let isha = ishaEmoji + ' Isha: ' + items.isha;
-    
-          // Create the message content
-          let captionText = `
-    *Prayer Times for ${cityName}:*
-    
-    ${fajr}
-    ${dhuhr}
-    ${asr}
-    ${maghrib}
-    ${isha}
-    
-    *Method:* ${method}
-    `.trim();
-    
-        
-          // Now send the image with the last reply
-          const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-          await XliconBotInc.sendMessage(m.chat, {
-            image: { url: imageUrl },
-            caption: captionText // Directly use captionText here
-          });
-    
-      } catch (error) {
-          console.error('Error fetching prayer times:', error);
-          return await replygcxlicon("An error occurred while fetching the prayer times.");
-      }
-    }
-    break;
-    
-    case 'sahihbukhari': {
-      // Supported languages
-      const languageNames = {
-        'ar': 'Arabic',
-        'ur': 'Urdu',
-        'en': 'English',
-        'id': 'Indonesian',
-        'bn': 'Bengali',
-        'rus': 'Russian',
-        'tr': 'Turkish',
-        'ta': 'Tamil'
-      };
-    
-      // If no language is specified, send the list of available languages
-      if (!text || !Object.keys(languageNames).includes(text.toLowerCase())) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let lang in languageNames) {
-          languageList += `- ${languageNames[lang]} (${lang})\n`;
-        }
-        languageList += `\nPlease specify a language using the format: \`sahihbukhari <language code>\` (e.g., \`sahihbukhari en\`)`;
-        return await replygcxlicon(languageList);
-      }
-    
-      // Extract the language from the text (e.g., "en" from "sahihbukhari en")
-      const lang = text.toLowerCase();
-    
-      // If the language is not valid, show the language options
-      if (!languageNames[lang]) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let langCode in languageNames) {
-          languageList += `- ${languageNames[langCode]} (${langCode})\n`;
-        }
-        languageList += `\nPlease choose a valid language.`;
-        return await replygcxlicon(languageList);
-      }
-    
-      // Generate a random Hadith number between 1 and 7560
-      const randomHadithNumber = Math.floor(Math.random() * 7560) + 1;
-    
-      try {
-        // Fetch the Hadith from the API
-        let url = `${global.api}islamic/hadith-sahih-al-bukhari?q=${randomHadithNumber}/${lang}&apikey=${global.id}`;
-        let response = await fetch(url);
-        let data = await response.json();
-    
-        // Check if the response is successful and contains Hadith data
-        if (data.status === 200 && data.result && data.result.data && data.result.data.hadiths) {
-          let hadiths = data.result.data.hadiths;
-          if (hadiths.length > 0) {
-            // Display the Hadith
-            let hadith = hadiths[0];
-            let captionText = `*Hadith Number:* ${hadith.hadithnumber}\n`
-                            + `*Text:* ${hadith.text}\n`
-                            + `*Book:* ${hadith.reference.book}\n`
-                            + `*Hadith:* ${hadith.reference.hadith}`;
-            
-          
-            // Now send the image with the last reply
-            const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-            await XliconBotInc.sendMessage(m.chat, {
-              image: { url: imageUrl },
-              caption: captionText // Use the Hadith caption here
-            });
-          } else {
-            await XliconBotInc.sendText(m.chat, "*No Hadith found for the given query.*");
-          }
-        } else {
-          await XliconBotInc.sendText(m.chat, "*Failed to fetch Hadith. Please try again later.*");
-        }
-      } catch (error) {
-        await XliconBotInc.sendText(m.chat, "*Error occurred while fetching Hadith.*");
-      }
-    }
-    break;
-    
-    case 'jamiattirmidhi': {
-      // Supported languages
-      const languageNames = {
-        'ar': 'Arabic',
-        'ur': 'Urdu',
-        'en': 'English',
-        'id': 'Indonesian',
-        'bn': 'Bengali',
-        'tr': 'Turkish'
-      };
-    
-      // If no language is specified, send the list of available languages
-      if (!text || !Object.keys(languageNames).includes(text.toLowerCase())) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let lang in languageNames) {
-          languageList += `- ${languageNames[lang]} (${lang})\n`;
-        }
-        languageList += `\nPlease specify a language using the format: \`jamiattirmidhi <language code>\` (e.g., \`jamiattirmidhi en\`)`;
-        return await replygcxlicon(languageList);
-      }
-    
-      // Extract the language from the text (e.g., "en" from "jamiattirmidhi en")
-      const lang = text.toLowerCase();
-    
-      // If the language is not valid, show the language options
-      if (!languageNames[lang]) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let langCode in languageNames) {
-          languageList += `- ${languageNames[langCode]} (${langCode})\n`;
-        }
-        languageList += `\nPlease choose a valid language.`;
-        return await replygcxlicon(languageList);
-      }
-    
-      // Generate a random Hadith number between 1 and 148
-      const randomHadithNumber = Math.floor(Math.random() * 148) + 1;
-    
-      try {
-        // Fetch the Hadith from the API
-        let url = `${global.api}islamic/hadith-jami-at-tirmidhi?q=${randomHadithNumber}/${lang}&apikey=${global.id}`;
-        let response = await fetch(url);
-        let data = await response.json();
-    
-        // Check if the response is successful and contains Hadith data
-        if (data.status === 200 && data.result && data.result.data && data.result.data.hadiths) {
-          let hadiths = data.result.data.hadiths;
-          if (hadiths.length > 0) {
-            // Display the Hadith
-            let hadith = hadiths[0];
-            let captionText = `*Hadith Number:* ${hadith.hadithnumber}\n`
-                            + `*Text:* ${hadith.text}\n`
-                            + `*Book:* ${hadith.reference.book}\n`
-                            + `*Hadith:* ${hadith.reference.hadith}\n`
-                            + `*Grades:*\n${hadith.grades.map(grade => `  *${grade.name}:* ${grade.grade}`).join('\n')}`;
-            
-            // Send the Hadith text using replygcxlicon
-            await replygcxlicon(captionText);
-    
-            // Now send the image with the final response
-            const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-            await XliconBotInc.sendMessage(m.chat, {
-              image: { url: imageUrl },
-              caption: captionText // Use the Hadith caption here
-            });
-          } else {
-            await XliconBotInc.sendText(m.chat, "*No Hadith found for the given query.*");
-          }
-        } else {
-          await XliconBotInc.sendText(m.chat, "*Failed to fetch Hadith. Please try again later.*");
-        }
-      } catch (error) {
-        await XliconBotInc.sendText(m.chat, "*Error occurred while fetching Hadith.*");
-      }
-    }
-    break;
-    
-    
-    case 'sunanannasai': {
-      // Supported languages
-      const languageNames = {
-        'ar': 'Arabic',
-        'ur': 'Urdu',
-        'en': 'English',
-        'id': 'Indonesian',
-        'bn': 'Bengali',
-        'tr': 'Turkish'
-      };
-    
-      // If no language is specified, send the list of available languages
-      if (!text || !Object.keys(languageNames).includes(text.toLowerCase())) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let lang in languageNames) {
-          languageList += `- ${languageNames[lang]} (${lang})\n`;
-        }
-        languageList += `\nPlease specify a language using the format: \`sunanannasai <language code>\` (e.g., \`sunanannasai en\`)`;
-        return await replygcxlicon(languageList); // Send with replygcxlicon for intermediate message
-      }
-    
-      // Extract the language from the text (e.g., "en" from "sunanannasai en")
-      const lang = text.toLowerCase();
-    
-      // If the language is not valid, show the language options
-      if (!languageNames[lang]) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let langCode in languageNames) {
-          languageList += `- ${languageNames[langCode]} (${langCode})\n`;
-        }
-        languageList += `\nPlease choose a valid language.`;
-        return await replygcxlicon(languageList); // Send with replygcxlicon for invalid language
-      }
-    
-      // Generate a random Hadith number between 1 and 324
-      const randomHadithNumber = Math.floor(Math.random() * 324) + 1;
-    
-      try {
-        // Fetch the Hadith from the API
-        let url = `${global.api}islamic/hadith-sunan-nasai?q=${randomHadithNumber}/${lang}&apikey=${global.id}`;
-        let response = await fetch(url);
-        let data = await response.json();
-    
-        // Check if the response is successful and contains Hadith data
-        if (data.status === 200 && data.result && data.result.data && data.result.data.hadiths) {
-          let hadiths = data.result.data.hadiths;
-          if (hadiths.length > 0) {
-            // Display the Hadith
-            let hadith = hadiths[0];
-            let captionText = `*Hadith Number:* ${hadith.hadithnumber}\n`
-                            + `*Text:* ${hadith.text}\n`
-                            + `*Book:* ${hadith.reference.book}\n`
-                            + `*Hadith:* ${hadith.reference.hadith}\n`
-                            + `*Grades:*\n${hadith.grades.map(grade => `  *${grade.name}:* ${grade.grade}`).join('\n')}`;
-    
-           
-    
-            // Now send the final message with the image and caption
-            const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-            await XliconBotInc.sendMessage(m.chat, {
-              image: { url: imageUrl },
-              caption: captionText // Attach the Hadith caption to the image
-            });
-          } else {
-            await XliconBotInc.sendText(m.chat, "*No Hadith found for the given query.*");
-          }
-        } else {
-          await XliconBotInc.sendText(m.chat, "*Failed to fetch Hadith. Please try again later.*");
-        }
-      } catch (error) {
-        await XliconBotInc.sendText(m.chat, "*Error occurred while fetching Hadith.*");
-      }
-    }
-    break;
-    
-    case 'jamiattirmidhi': {
-      // Supported languages
-      const languageNames = {
-        'ar': 'Arabic',
-        'ur': 'Urdu',
-        'en': 'English',
-        'id': 'Indonesian',
-        'bn': 'Bengali',
-        'tr': 'Turkish'
-      };
-    
-      // If no language is specified, send the list of available languages
-      if (!text || !Object.keys(languageNames).includes(text.toLowerCase())) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let lang in languageNames) {
-          languageList += `- ${languageNames[lang]} (${lang})\n`;
-        }
-        languageList += `\nPlease specify a language using the format: \`jamiattirmidhi <language code>\` (e.g., \`jamiattirmidhi en\`)`;
-        return await replygcxlicon(languageList); // Send with replygcxlicon for intermediate message
-      }
-    
-      // Extract the language from the text (e.g., "en" from "jamiattirmidhi en")
-      const lang = text.toLowerCase();
-    
-      // If the language is not valid, show the language options
-      if (!languageNames[lang]) {
-        let languageList = 'Available languages for Hadith:\n\n';
-        for (let langCode in languageNames) {
-          languageList += `- ${languageNames[langCode]} (${langCode})\n`;
-        }
-        languageList += `\nPlease choose a valid language.`;
-        return await replygcxlicon(languageList); // Send with replygcxlicon for invalid language
-      }
-    
-      // Generate a random Hadith number between 1 and 148
-      const randomHadithNumber = Math.floor(Math.random() * 148) + 1;
-    
-      try {
-        // Fetch the Hadith from the API
-        let url = `${global.api}islamic/hadith-jami-at-tirmidhi?q=${randomHadithNumber}/${lang}&apikey=${global.id}`;
-        let response = await fetch(url);
-        let data = await response.json();
-    
-        // Check if the response is successful and contains Hadith data
-        if (data.status === 200 && data.result && data.result.data && data.result.data.hadiths) {
-          let hadiths = data.result.data.hadiths;
-          if (hadiths.length > 0) {
-            // Display the Hadith
-            let hadith = hadiths[0];
-            let captionText = `*Hadith Number:* ${hadith.hadithnumber}\n`
-                            + `*Text:* ${hadith.text}\n`
-                            + `*Book:* ${hadith.reference.book}\n`
-                            + `*Hadith:* ${hadith.reference.hadith}\n`
-                            + `*Grades:*\n${hadith.grades.map(grade => `  *${grade.name}:* ${grade.grade}`).join('\n')}`;
-    
-            
-            // Now send the final message with the image and caption
-            const imageUrl = 'https://i.ibb.co/8NksWfT/ISLAM-IMAGE.png'; // Replace with the actual image URL
-            await XliconBotInc.sendMessage(m.chat, {
-              image: { url: imageUrl },
-              caption: captionText // Attach the Hadith caption to the image
-            });
-          } else {
-            await XliconBotInc.sendText(m.chat, "*No Hadith found for the given query.*");
-          }
-        } else {
-          await XliconBotInc.sendText(m.chat, "*Failed to fetch Hadith. Please try again later.*");
-        }
-      } catch (error) {
-        await XliconBotInc.sendText(m.chat, "*Error occurred while fetching Hadith.*");
-      }
-    }
-    break;
-    
-    
-
-
 //-------------------------------------------------------------------------------------------------------------//
 
 
@@ -11272,1107 +10137,6 @@ case 'animedl': {
   }
 }
 break;
-              
-                
- //Manga Cmds               
-
-case 'mangainfo': {
-  const mangaTitle = text.trim();
-  if (!mangaTitle) {
-    return replygcxlicon('❌ Provide a manga title, e.g., mangainfo One Piece');
-  }
-
-  try {
-    const mangaSearchUrl = `https://api.mangadex.org/manga?title=${encodeURIComponent(mangaTitle)}&limit=1&availableTranslatedLanguage[]=en`;
-    const searchResponse = await axios.get(mangaSearchUrl);
-
-    if (!searchResponse.data || !searchResponse.data.data || searchResponse.data.data.length === 0) {
-      return replygcxlicon(`❌ No English manga found with the title "${mangaTitle}".`);
-    }
-
-    const manga = searchResponse.data.data[0];
-    const { title, description, status, tags } = manga.attributes;
-
-    const genres = tags
-      .map((tag) => tag.attributes.name.en)
-      .join(', ') || 'Unknown';
-
-    const replyText = `
-*📖 Manga Info:*
-📚 *Title:* ${title.en || 'No title available'}
-📜 *Description:* ${description.en || 'No description available'}
-🔖 *Status:* ${status || 'Unknown'}
-🎭 *Genres:* ${genres}
-`;
-
-    return replygcxlicon(replyText);
-  } catch (error) {
-    console.error('Error fetching manga info:', error.message);
-    return replygcxlicon(`❌ Error fetching manga info: ${error.message}`);
-  }
-}
-break;
-
-case 'searchchapter': {
-  const mangaTitle = text.trim();
-  if (!mangaTitle) {
-    return replygcxlicon('❌ Provide a manga title, e.g., searchchapter One Piece');
-  }
-
-  try {
-    const mangaSearchUrl = `https://api.mangadex.org/manga?title=${encodeURIComponent(mangaTitle)}&limit=1&availableTranslatedLanguage[]=en`;
-    const searchResponse = await axios.get(mangaSearchUrl);
-
-    if (!searchResponse.data || !searchResponse.data.data || searchResponse.data.data.length === 0) {
-      return replygcxlicon(`❌ No English manga found with the title "${mangaTitle}".`);
-    }
-
-    const mangaId = searchResponse.data.data[0].id;
-    const chaptersUrl = `https://api.mangadex.org/chapter?manga=${mangaId}&translatedLanguage[]=en&limit=10`;
-    const chaptersResponse = await axios.get(chaptersUrl);
-
-    if (!chaptersResponse.data || chaptersResponse.data.data.length === 0) {
-      return replygcxlicon(`❌ No chapters found for "${mangaTitle}".`);
-    }
-
-    const chaptersList = chaptersResponse.data.data
-      .map(
-        (chapter) =>
-          `📘 Chapter ${chapter.attributes.chapter}: ${chapter.attributes.title || "Untitled"}`
-      )
-      .join('\n');
-
-    const replyText = `*📚 Available Chapters for "${mangaTitle}":*\n${chaptersList}`;
-    return replygcxlicon(replyText);
-  } catch (error) {
-    console.error('Error fetching chapters:', error.message);
-    return replygcxlicon(`❌ Error fetching chapters: ${error.message}`);
-  }
-}
-break;
-
-
-case 'mangachapter': {
-  const input = text.trim();
-  if (!input) {
-    return replygcxlicon('❌ Please provide a manga title and chapter, e.g., One Piece chapter 1120.');
-  }
-
-  const match = input.match(/(.+?)\s+chapter\s+(\d+)/i);
-  if (!match) {
-    return replygcxlicon('❌ Invalid format. Use: <title> chapter <number>');
-  }
-  await XliconStickWait();
-  await replygcxlicon('PLEASE WAIT 30SEC');
-  const mangaTitle = match[1].trim();
-  const chapterNumber = match[2];
-  const baseUrl = 'https://api.mangadex.org';
-
-  try {
-    // Search for manga
-    const searchResponse = await axios.get(`${baseUrl}/manga`, {
-      params: { title: mangaTitle, limit: 1, availableTranslatedLanguage: ['en'] },
-    });
-
-    if (searchResponse.data.data.length === 0) {
-      return replygcxlicon(`❌ No manga found with the title "${mangaTitle}".`);
-    }
-
-    const mangaId = searchResponse.data.data[0].id;
-
-    // Get the chapter
-    const chapterResponse = await axios.get(`${baseUrl}/chapter`, {
-      params: { manga: mangaId, chapter: chapterNumber, translatedLanguage: ['en'] },
-    });
-
-    if (chapterResponse.data.data.length === 0) {
-      return replygcxlicon(`❌ No chapter ${chapterNumber} found for "${mangaTitle}".`);
-    }
-
-    const chapterId = chapterResponse.data.data[0].id;
-    const serverResponse = await axios.get(`${baseUrl}/at-home/server/${chapterId}`);
-    const { baseUrl: chapterBaseUrl, chapter } = serverResponse.data;
-
-    const imageUrls = chapter.data.map(
-      (fileName) => `${chapterBaseUrl}/data/${chapter.hash}/${fileName}`
-    );
-
-    if (imageUrls.length === 0) {
-      return replygcxlicon(`❌ No images found for chapter ${chapterNumber} of "${mangaTitle}".`);
-    }
-
-    const pdfPath = `/tmp/manga_${mangaTitle}_chapter_${chapterNumber}.pdf`;
-    const pdfDoc = new PDFDocument();
-    const writeStream = fs.createWriteStream(pdfPath);
-
-    pdfDoc.pipe(writeStream);
-
-    for (const imgUrl of imageUrls) {
-      const imageBuffer = (await axios.get(imgUrl, { responseType: 'arraybuffer' })).data;
-      pdfDoc.addPage().image(imageBuffer, { fit: [500, 700], align: 'center', valign: 'center' });
-    }
-
-    pdfDoc.end();
-
-    writeStream.on('finish', async () => {
-      await XliconBotInc.sendMessage(m.chat, {
-        document: { url: pdfPath },
-        fileName: `Manga_${mangaTitle}_Chapter_${chapterNumber}.pdf`,
-        mimetype: 'application/pdf',
-      }, { quoted: m });
-
-      fs.unlinkSync(pdfPath);
-    });
-  } catch (error) {
-    console.error('Error fetching manga chapter:', error.message);
-    return replygcxlicon('❌ An error occurred while fetching the chapter. Please try again later.');
-  }
-}
-break;
-
-        
-        case 'mangachapter2': {
-            
-  const input = text.trim();
-  if (!input) {
-    return replygcxlicon('❌ Please provide a manga title and chapter, e.g., One Piece chapter 1120.');
-  }
-  const apiUrl = 'https://api.mangadex.org'; 
-  const match = input.match(/(.+?)\s+chapter\s+(\d+)/i);
-  if (!match) {
-    return replygcxlicon('❌ Invalid format. Use: <title> chapter <number>');
-  }
-
-  await XliconStickWait();
-  await replygcxlicon('PLEASE WAIT 30SEC');
-
-  const mangaTitle = match[1].trim();
-  const chapterNumber = match[2];
-
-  try {
-    // Search for manga
-    const mangaResults = await searchManga(mangaTitle, 1, 1);
-    if (mangaResults.length === 0) {
-      return replygcxlicon(`❌ No manga found with the title "${mangaTitle}".`);
-    }
-
-    const mangaId = mangaResults[0].id;
-
-    // Get chapter
-    const chapterResponse = await axios.get(`${apiUrl}/chapter`, {
-      params: { manga: mangaId, chapter: chapterNumber, translatedLanguage: ['en'] },
-    });
-
-    if (!chapterResponse.data.data || chapterResponse.data.data.length === 0) {
-      return replygcxlicon(`❌ No chapter ${chapterNumber} found for "${mangaTitle}".`);
-    }
-
-    const chapterId = chapterResponse.data.data[0].id;
-
-    // Fetch chapter pages
-    const pages = await fetchChapterPages(chapterId);
-
-    if (pages.length === 0) {
-      return replygcxlicon(`❌ No images found for chapter ${chapterNumber} of "${mangaTitle}".`);
-    }
-
-    // Create PDF
-    const pdfPath = `/tmp/manga_${mangaTitle}_chapter_${chapterNumber}.pdf`;
-    const pdfDoc = new PDFDocument();
-    const writeStream = fs.createWriteStream(pdfPath);
-
-    pdfDoc.pipe(writeStream);
-
-    for (const page of pages) {
-      const imageBuffer = (await axios.get(page.img, { responseType: 'arraybuffer' })).data;
-      pdfDoc.addPage().image(imageBuffer, { fit: [500, 700], align: 'center', valign: 'center' });
-    }
-
-    pdfDoc.end();
-
-    writeStream.on('finish', async () => {
-      await XliconBotInc.sendMessage(m.chat, {
-        document: { url: pdfPath },
-        fileName: `Manga_${mangaTitle}_Chapter_${chapterNumber}.pdf`,
-        mimetype: 'application/pdf',
-      }, { quoted: m });
-
-      fs.unlinkSync(pdfPath);
-    });
-  } catch (error) {
-    console.error('Error fetching manga chapter:', error.message);
-    return replygcxlicon('❌ An error occurred while fetching the chapter. Please try again later.');
-  }
-}
-break;
-
-case 'randommanga': {
-  try {
-    const offset = Math.floor(Math.random() * 1000);
-    const randomUrl = `https://api.mangadex.org/manga?limit=1&offset=${offset}&availableTranslatedLanguage[]=en`;
-    const response = await axios.get(randomUrl);
-
-    if (!response.data || !response.data.data || response.data.data.length === 0) {
-      return replygcxlicon('❌ Could not fetch a random manga. Please try again.');
-    }
-
-    const manga = response.data.data[0];
-    const { title, description, status, tags } = manga.attributes;
-
-    const genres = tags.map(tag => tag.attributes.name.en).join(", ") || "N/A";
-    const mangaDetails = `
-*📖 Random Manga Suggestion:*
-⭐ *Title:* ${title.en || "N/A"}
-📝 *Description:* ${description?.en || "No description available"}
-📚 *Status:* ${status || "Unknown"}
-🎭 *Genres:* ${genres}
-    `;
-
-    return replygcxlicon(mangaDetails);
-  } catch (error) {
-    console.error('Error fetching random manga:', error.message);
-    return replygcxlicon(`❌ Error fetching random manga: ${error.message}`);
-  }
-}
-break;
-
-case 'animeedit': case 'amv': {
-  XliconStickWait(); // Indicate that the bot is processing the request
-
-  try {
-      // List of available API URLs
-      const apiUrls = [
-          'https://aemt.uk.to/download/storyanime',
-          'https://meitang.xyz/download/storyanime',
-          'https://btch.us.kg/download/storyanime',
-          'https://api.tioo.eu.org/download/storyanime',
-          'https://api.tioprm.eu.org/download/storyanime'
-      ];
-
-      // Select a random API URL
-      const randomApiUrl = apiUrls[Math.floor(Math.random() * apiUrls.length)];
-
-      // Fetch anime status video from the selected API
-      const response = await axios.get(randomApiUrl, {
-          headers: {
-              accept: 'application/json' // Set the accept header to request JSON response
-          }
-      });
-      console.log('API Response:', response.data); // Log the response for debugging
-
-      // Check if the response is successful and contains the result
-      if (!response.data.status || !response.data.result) {
-          throw new Error('Failed to fetch anime status video.');
-      }
-
-      const { title, url } = response.data.result;
-
-      // Prepare caption and send video
-      const caption = `🎬 *Enjoy your Anime Edit!* ✨`;
-
-      await XliconBotInc.sendMessage(m.chat, {
-          video: { url: url },
-          caption: caption,
-          mimetype: 'video/mp4', // Specify the MIME type
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error in storyanime command:', error.message); // Log specific error message
-      replygcxlicon('⚠️ An error occurred while fetching the anime status video.');
-  }
-}
-break;
-
-
-
-case 'wallhp': case 'akira': case 'akiyama': case 'ana': case 'art': case 'asuna': case 'ayuzawa': case 'boruto': case 'bts': case 'chiho': case 'chitoge': case 'cosplay': case 'cosplayloli': case 'cosplaysagiri': case 'cyber': case 'deidara': case 'doraemon': case 'elaina': case 'emilia': case 'erza': case 'exo':  case 'gamewallpaper': case 'gremory': case 'hacker': case 'hestia': case 'husbu': case 'inori': case 'islamic': case 'isuzu': case 'itachi': case 'itori': case 'jennie': case 'jiso': case 'justina': case 'kaga': case 'kagura': case 'kakasih': case 'kaori': case 'cartoon': case 'shortquote': case 'keneki': case 'kotori': case 'kurumi': case 'lisa': case 'loli2': case 'madara': case 'megumin': case 'mikasa': case 'mikey': case 'miku': case 'minato': case 'mountain': case 'naruto': case 'nekonime': case 'nezuko': case 'onepiece': case 'pentol': case 'pokemon': case 'programming':  case 'randomnime': case 'randomnime2': case 'rize': case 'rose': case 'sagiri': case 'sakura': case 'sasuke': case 'satanic': case 'shina': case 'shinka': case 'shinomiya': case 'shizuka': case 'shota': case 'space': case 'technology': case 'tejina': case 'toukachan': case 'tsunade': case 'waifu2': case 'yotsuba': case 'yuki': case 'yulibocil': case 'yumeko': {
-  await XliconStickWait();  // Indicate that the bot is processing the request
-
-  try {
-      let heyy;
-      if (/akira/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/akira.json')
-if (/akiyama/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/akiyama.json')
-if (/ana/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/ana.json')
-if (/art/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/art.json')
-if (/asuna/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/asuna.json')
-if (/ayuzawa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/ayuzawa.json')
-if (/boneka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/boneka.json')
-if (/boruto/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/boruto.json')
-if (/bts/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/bts.json')
-if (/cecan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cecan.json')
-if (/chiho/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/chiho.json')
-if (/chitoge/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/chitoge.json')
-if (/cogan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cogan.json')
-if (/cosplay/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cosplay.json')
-if (/cosplayloli/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cosplayloli.json')
-if (/cosplaysagiri/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cosplaysagiri.json')
-if (/cyber/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/cyber.json')
-if (/deidara/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/deidara.json')
-if (/doraemon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/doraemon.json')
-if (/eba/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/eba.json')
-if (/elaina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/elaina.json')
-if (/emilia/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/emilia.json')
-if (/erza/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/erza.json')
-if (/exo/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/exo.json')
-if (/femdom/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/femdom.json')
-if (/freefire/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/freefire.json')
-if (/gamewallpaper/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/gamewallpaper.json')
-if (/glasses/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/glasses.json')
-if (/gremory/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/gremory.json')
-if (/hacker/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/hekel.json')
-if (/hestia/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/hestia.json')
-if (/husbu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/husbu.json')
-if (/inori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/inori.json')
-if (/islamic/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/islamic.json')
-if (/isuzu/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/isuzu.json')
-if (/itachi/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/itachi.json')
-if (/itori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/itori.json')
-if (/jennie/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/jeni.json')
-if (/jiso/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/jiso.json')
-if (/justina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/justina.json')
-if (/kaga/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kaga.json')
-if (/kagura/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kagura.json')
-if (/kakasih/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kakasih.json')
-if (/kaori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kaori.json')
-if (/cartoon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kartun.json')
-if (/shortquote/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/katakata.json')
-if (/keneki/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/keneki.json')
-if (/kotori/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kotori.json')
-if (/kpop/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kpop.json')
-if (/kucing/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kucing.json')
-if (/kurumi/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/kurumi.json')
-if (/lisa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/lisa.json')
-if (/loli2/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/loli.json')
-if (/madara/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/madara.json')
-if (/megumin/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/megumin.json')
-if (/mikasa/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mikasa.json')
-if (/mikey/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mikey.json')
-if (/miku/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/miku.json')
-if (/minato/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/minato.json')
-if (/mobile/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mobil.json')
-if (/motor/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/motor.json')
-if (/mountain/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/mountain.json')
-if (/naruto/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/naruto.json')
-if (/nekonime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/nekonime.json')
-if (/nezuko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/nezuko.json')
-if (/onepiece/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/onepiece.json')
-if (/pentol/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/pentol.json')
-if (/pokemon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/pokemon.json')
-if (/profil/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/profil.json')
-if (/progamming/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/programming.json')
-if (/pubg/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/pubg.json')
-if (/randblackpink/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/randblackpink.json')
-if (/randomnime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/randomnime.json')
-if (/randomnime2/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/randomnime2.json')
-if (/rize/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/rize.json')
-if (/rose/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/rose.json')
-if (/ryujin/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/ryujin.json')
-if (/sagiri/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/sagiri.json')
-if (/sakura/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/sakura.json')
-if (/sasuke/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/sasuke.json')
-if (/satanic/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/satanic.json')
-if (/shina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shina.json')
-if (/shinka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shinka.json')
-if (/shinomiya/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shinomiya.json')
-if (/shizuka/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shizuka.json')
-if (/shota/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/shota.json')
-if (/space/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/tatasurya.json')
-if (/technology/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/technology.json')
-if (/tejina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/tejina.json')
-if (/toukachan/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/toukachan.json')
-if (/tsunade/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/tsunade.json')
-if (/waifu2/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/waifu.json')
-if (/wallhp/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/wallhp.json')
-if (/wallml/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/wallml.json')
-if (/wallmlnime/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/wallnime.json')
-if (/yotsuba/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yotsuba.json')
-if (/yuki/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yuki.json')
-if (/yulibocil/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yulibocil.json')
-if (/yumeko/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/yumeko.json')
-
-      let yeha = heyy[Math.floor(Math.random() * heyy.length)];
-
-      // Prepare and send the image with caption
-      const caption = `Hi ${m.pushName} 👋\n_*Here is the result of: ${command}*_`;
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: yeha },
-          caption: caption,
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error in wallhp command:', error.message);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later. 😓');
-  }
-}
-break;
-
-
-//------------------------------------------------------------------------------------------------//
-case 'anime': {
-    // Get the anime name from the user's input
-    let queryText = args.join(' ');
-
-    // Check if queryText is provided
-    if (!queryText) {
-        return await XliconBotInc.sendText(m.chat, "⚠️ Please provide the name of the anime.");
-    }
-
-    // Check if the query includes '-tr' for translation
-    const translateFlag = queryText.endsWith('-tr');
-    if (translateFlag) {
-        queryText = queryText.slice(0, -4).trim(); // Remove the '-tr' from the query
-    }
-
-    // Define the API URL with the user's query
-    const apiUrl = `https://api.lolhuman.xyz/api/anime?apikey=dcb4198762eb793a386a9c1c&query=${encodeURIComponent(queryText)}`;
-
-    try {
-        // Fetch data from the API
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-
-        if (data.status !== 200 || !data.result || data.result.length === 0) {
-            return await XliconBotInc.sendText(m.chat, "❌ Failed to fetch anime details. Please check the query and try again.");
-        }
-
-        const anime = data.result;
-
-        // Extract relevant data with safety checks
-        const title = anime.title?.english || anime.title?.romaji || anime.title?.native || 'Unknown Title';
-        const description = anime.description || 'No description available.';
-        const genres = anime.genres?.join(', ') || 'Unknown';
-        const status = anime.status || 'Unknown';
-        const episodes = anime.episodes || 'Unknown';
-        const duration = anime.duration || 'Unknown';
-        const startDate = anime.startDate ? `${anime.startDate.year}-${anime.startDate.month}-${anime.startDate.day}` : 'N/A';
-        const endDate = anime.endDate ? `${anime.endDate.year}-${anime.endDate.month}-${anime.endDate.day}` : 'N/A';
-
-        // Delay function to throttle requests
-        function delay(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        // Translate function with retry logic
-        async function translateText(text, targetLang) {
-            let retries = 5;
-            while (retries > 0) {
-                try {
-                    await delay(500); // Delay between requests
-                    let result = await translate(text, { to: targetLang });
-                    return result.text;
-                } catch (error) {
-                    console.error('Translation error:', error);
-                    if (error.message.includes('TooManyRequestsError')) {
-                        await delay(10000); // Wait for 10 seconds before retrying
-                    } else {
-                        return text; // Return original text if translation fails
-                    }
-                    retries -= 1;
-                }
-            }
-            return text; // Return original text if all retries fail
-        }
-
-        // Translate description if needed
-        let translatedDescription = description;
-        if (translateFlag) {
-            translatedDescription = await translateText(description, 'ur');
-        }
-
-        // Create the caption with translations and emojis
-        const captionText = `*🌟 Title:* ${title}
-
-✨ *Genres:* ${genres}
-✨ *Status:* ${status}
-✨ *Episodes:* ${episodes}
-✨ *Duration:* ${duration} minutes per episode
-✨ *Start Date:* ${startDate}
-✨ *End Date:* ${endDate}
-
-📝 *Description:* ${translatedDescription}
-`.trim();
-
-        // Use the anime cover image URL directly
-        const imageUrl = anime.coverImage?.large || 'https://via.placeholder.com/500';
-
-        // Send the message with the image URL and the caption
-        await XliconBotInc.sendMessage(m.chat, {
-            image: { url: imageUrl },
-            caption: captionText,  // caption text with translated description (if applicable)
-            mentions: [m.sender]   // Mention the sender
-        });
-
-    } catch (error) {
-        console.error('API Fetch Error:', error);
-        return await XliconBotInc.sendText(m.chat, "❌ An error occurred while fetching the anime details.");
-    }
-}
-break;
-
-
-case 'animeawoo': {
-  await XliconStickWait();
-
-  try {
-      // Fetch Awoo image from the waifu.pics API
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeAwoo image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-      
-case 'animemegumin': {
-  await XliconStickWait();
-  try {
-      // Fetch Megumin image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/megumin`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeMegumin image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animeshinobu': {
-  await XliconStickWait();
-  try {
-      // Fetch Shinobu image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/shinobu`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeShinobu image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animehandhold': {
-  await XliconStickWait();
-  try {
-      // Fetch Handhold image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/handhold`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeHandhold image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animehighfive': {
-  await XliconStickWait();
-  try {
-      // Fetch Highfive image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/highfive`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeHighfive image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-      
-case 'animedance': {
-  await XliconStickWait();
-  try {
-      // Fetch Dance image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/dance`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeDance image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animehappy': {
-  await XliconStickWait();
-  try {
-      // Fetch Happy image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/happy`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeHappy image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animeglomp': {
-  await XliconStickWait();
-  try {
-      // Fetch Glomp image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/glomp`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeGlomp image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animesmug': {
-  await XliconStickWait();
-  try {
-      // Fetch Smug image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/smug`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeSmug image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animeblush': {
-  await XliconStickWait();
-  try {
-      // Fetch Blush image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/blush`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeBlush image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animewave': {
-  await XliconStickWait();
-  try {
-      // Fetch Wave image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/wave`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-        caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeWave image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-      
-case 'animesmile': {
-  await XliconStickWait();
-  try {
-      // Fetch Smile image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/smile`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeSmile image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-      
-case 'animepoke': {
-  await XliconStickWait();
-  try {
-      // Fetch Poke image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/poke`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimePoke image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animewink': {
-  await XliconStickWait();
-  try {
-      // Fetch Wink image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/wink`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeWink image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animebonk': {
-  await XliconStickWait();
-  try {
-      // Fetch Bonk image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/bonk`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeBonk image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animebully': {
-  await XliconStickWait();
-  try {
-      // Fetch Bully image
-      waifudd = await axios.get(`https://waifu.pics/api/sfw/bully`);
-
-      // Send the image with a caption
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-
-  } catch (error) {
-      console.error('Error fetching AnimeBully image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-      
-case 'animeyeet': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://waifu.pics/api/sfw/yeet`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeYeet image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animebite': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://waifu.pics/api/sfw/bite`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeBite image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animelick': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://waifu.pics/api/sfw/lick`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeLick image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animekill': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://waifu.pics/api/sfw/kill`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeKill image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animecry': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://waifu.pics/api/sfw/cry`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeCry image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-      
-case 'animewlp': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/wallpaper`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeWLP image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animekiss': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/kiss`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeKiss image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animehug': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/hug`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeHug image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animeneko': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://waifu.pics/api/sfw/neko`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeNeko image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animepat': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/pat`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimePat image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-      
-case 'animeslap': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/slap`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeSlap image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animecuddle': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/cuddle`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeCuddle image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-//ANIME GIRLS PICS        
-case 'animewaifu': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeWaifu image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animenom': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/nom`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeNom image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animefoxgirl': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/fox_girl`);
-      await XliconBotInc.sendMessage(m.chat, {
-          
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeFoxGirl image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animetickle': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/tickle`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-          caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeTickle image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
-case 'animegecg': {
-  await XliconStickWait();
-  try {
-      let waifudd = await axios.get(`https://nekos.life/api/v2/img/gecg`);
-      await XliconBotInc.sendMessage(m.chat, {
-          image: { url: waifudd.data.url },
-         caption: `Hi ${m.pushName} 👋\n_*Here is the result of ${command} 📜✨*_`
-      }, { quoted: m });
-  } catch (error) {
-      console.error('Error fetching AnimeGecg image:', error);
-      replygcxlicon('⚠️ An error occurred while fetching the image. Please try again later.');
-  }
-}
-break;
-
 
 //-------------------------------------------------------------------------------------------------------------//
 
@@ -13375,7 +11139,7 @@ try {
 break;
 
 case 'telestalk': {
-if (!text) return replygcxlicon(`*Where is the Telegram Username?*\n_Example:_\n${prefix}${command} ahmmikun`);
+if (!text) return replygcxlicon(`*Where is the Telegram Username?*\n_Example:_\n${prefix}${command} `);
 
 try {
   // Fetch Telegram user data using the provided API
@@ -13473,7 +11237,7 @@ break;
 
 case 'rentbot':
     // Image URL to use (this can be customized)
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg'; // Replace with your desired image URL
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg'; // Replace with your desired image URL
 
     // Message text with emojis
     const messageText = `Type ${prefix}owner and chat him 💬👑`;
@@ -13575,7 +11339,7 @@ break
 break;
     
 case 'socialmedia': 
-case 'sosmed': 
+case 'followme': 
 case 'update': {
     const slides = [
         [
@@ -13584,9 +11348,9 @@ case 'update': {
             `🎥 *Subscribe to the Developer's YouTube Channel for Updates*`, // Body message
             botname, // Footer message
             '🔗 Visit', // Button display text
-            'https://youtube.com/@s4salmanyt', // Command (URL in this case)
+            'https://youtube.com/', // Command (URL in this case)
             'cta_url', // Button type
-            'https://youtube.com/@s4salmanyt' // URL (used in image generation)
+            'https://youtube.com/' // URL (used in image generation)
         ], 
         [
             'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1024px-Telegram_2019_Logo.svg.png', // Image URL
@@ -13594,9 +11358,9 @@ case 'update': {
             `📱 *Join the Developer's Telegram Channel for Updates*`, // Body message
             botname, // Footer message
             '🔗 Visit', // Button display text
-            'https://t.me/ahmmitech', // Command (URL in this case)
+            'https://t.me/', // Command (URL in this case)
             'cta_url', // Button type
-            'https://t.me/ahmmitech' // URL (used in image generation)
+            'https://t.me/' // URL (used in image generation)
         ], 
         [
             'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/360px-GitHub_Invertocat_Logo.svg.png', // Image URL
@@ -13604,9 +11368,9 @@ case 'update': {
             `🐱 *Follow the Developer on GitHub*`, // Body message
             botname, // Footer message
             '🔗 Visit', // Button display text
-            'https://github.com/salmanytofficial', // Command (URL in this case)
+            'https://github.com/Samuel-Muli', // Command (URL in this case)
             'cta_url', // Button type
-            'https://github.com/salmanytofficial' // URL (used in image generation)
+            'https://github.com/Samuel-Muli' // URL (used in image generation)
         ], 
         [
             'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/264px-Instagram_logo_2016.svg.png', // Image URL
@@ -13614,9 +11378,9 @@ case 'update': {
             `📸 *Follow the Developer on Instagram*`, // Body message
             botname, // Footer message
             '🔗 Visit', // Button display text
-            'https://www.instagram.com/ahmmikun', // Command (URL in this case)
+            'https://www.instagram.com/', // Command (URL in this case)
             'cta_url', // Button type
-            'https://www.instagram.com/ahmmikun' // URL (used in image generation)
+            'https://www.instagram.com/' // URL (used in image generation)
         ], 
         [
             'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png', // Image URL
@@ -13624,9 +11388,9 @@ case 'update': {
             `💬 *Contact the Developer on WhatsApp*`, // Body message
             botname, // Footer message
             '🔗 Visit', // Button display text
-            'https://Wa.me/916909137213', // Command (URL in this case)
+            'https://Wa.me/254705244235', // Command (URL in this case)
             'cta_url', // Button type
-            'https://Wa.me/916909137213' // URL (used in image generation)
+            'https://Wa.me/254705244235' // URL (used in image generation)
         ], 
     ];
 
@@ -13758,7 +11522,7 @@ case 'update': {
                                 forwardingScore: 999,
                                 isForwarded: true,
                                 forwardedNewsletterMessageInfo: {
-                                    newsletterJid: '120363232303807350@newsletter',
+                                    newsletterJid: '254705244235@s.whatsapp.net',
                                     newsletterName: ownername,
                                     serverMessageId: 143
                                 }
@@ -13782,19 +11546,19 @@ case 'update': {
 Here are the Developer's Social Media Links for Updates:
 
 🎥 *Subscribe to the Developer's YouTube Channel for Updates*  
-🔗 Visit: https://youtube.com/@s4salmanyt
+🔗 Visit: https://youtube.com/
 
 📱 *Join the Developer's Telegram Channel for Updates*  
-🔗 Visit: https://t.me/ahmmitech
+🔗 Visit: https://t.me/
 
 🐱 *Follow the Developer on GitHub*  
-🔗 Visit: https://github.com/salmanytofficial
+🔗 Visit: https://github.com/Samuel-Muli
 
 📸 *Follow the Developer on Instagram*  
-🔗 Visit: https://www.instagram.com/ahmmikun
+🔗 Visit: https://www.instagram.com/
 
 💬 *Contact the Developer on WhatsApp*  
-🔗 Visit: https://Wa.me/916909137213
+🔗 Visit: https://Wa.me/254705244235
 
 For more updates, check out the links above!
 `);
@@ -13832,7 +11596,7 @@ case 'truecaller': {
     }
 
     let json = await response.json();
-    json.creator = 'XLICON'; // Change creator to Xlicon
+    json.creator = '꧁༒🖤⃕☽︎ＳⱥＭｕ☾⃕🖤︎༒꧂'; // Change creator to ꧁༒ ☬: 𝕶𝖆𝖗𝖊𝖓 :☬ ༒꧂
 
     let details = '';
     for (let prop in json) {
@@ -13860,7 +11624,7 @@ case 'truecaller': {
     }
 
     // Send the details message with an image link
-    const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+    const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
     await XliconBotInc.sendMessage(m.chat, {
       image: { url: imageUrl },
@@ -14049,7 +11813,7 @@ break;
         if (!result || !result.text) return replygcxlicon('⚠️ Translation failed. Please try again.');
 
         const caption = `🌐 *Translated Text:* ${result.text}\n\n*🔤 From:* ${text}\n*🔠 To:* ${lang}`;
-        const imageUrl = 'https://i.ibb.co/xz5JwB6/Xlicon-Pic.jpg';
+        const imageUrl = 'https://i.ibb.co/v4Xr1tyL/1744607579990.jpg';
 
         // Send the message with the image URL directly
         await XliconBotInc.sendMessage(m.chat, {
@@ -14207,9 +11971,55 @@ break
         
             break
         
-        
+        case 'tonormal':
+case 'revertviewonce': {
+    if (!m.quoted) return replygcxlicon(`Reply to a View-Once Image/Video`);
+
+    // Indicate processing
+    await XliconStickWait();
+
+    try {
+        // Check if the quoted message is a view-once message
+        const viewOnceContent = m.quoted.message?.viewOnceMessage?.message;
+
+        if (!viewOnceContent) {
+            return replygcxlicon(`The replied message is not a view-once message.`);
+        }
+
+        if (viewOnceContent.imageMessage) {
+            // If it's a view-once image
+            const mediaPath = await XliconBotInc.downloadAndSaveMediaMessage(viewOnceContent.imageMessage);
+            XliconBotInc.sendMessage(m.chat, {
+                image: {
+                    url: mediaPath
+                },
+                caption: "Here is the image without view-once restriction."
+            }, {
+                quoted: m
+            });
+        } else if (viewOnceContent.videoMessage) {
+            // If it's a view-once video
+            const mediaPath = await XliconBotInc.downloadAndSaveMediaMessage(viewOnceContent.videoMessage);
+            XliconBotInc.sendMessage(m.chat, {
+                video: {
+                    url: mediaPath
+                },
+                caption: "Here is the video without view-once restriction."
+            }, {
+                quoted: m
+            });
+        } else {
+            replygcxlicon(`Unsupported view-once content type.`);
+        }
+    } catch (error) {
+        console.error('Error reverting view-once message:', error);
+        replygcxlicon(`Failed to process the view-once message. Make sure the message is valid.`);
+    }
+    break;
+}
+
 			case 'fliptext': {
-                if (args.length < 1) return replygcxlicon(`Example:\n${prefix}fliptext dgxlicon`)
+                if (args.length < 1) return replygcxlicon(`Example:\n${prefix}fliptext SaMuTech`)
                 quere = args.join(" ")
                 flipe = quere.split('').reverse().join('')
                 replygcxlicon(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -14228,14 +12038,14 @@ break
 	    break
         
 			case 'obfus': case 'obfuscate':{
-if (!text) return replygcxlicon(`Example ${prefix+command} const xliconbot = require('baileys')`)
+if (!text) return replygcxlicon(`Example ${prefix+command} const karenbot = require('baileys')`)
 await XliconStickWait()                
 try {
 let meg = await obfus(text)
 replygcxlicon(`Success
 ${meg.result}`)
 } catch {
-	replygcxlicon(`Use the command properly\nExample ${prefix+command} const xliconbot = require('baileys')`)
+	replygcxlicon(`Use the command properly\nExample ${prefix+command} const karenbot = require('baileys')`)
 }
 }
 break
@@ -14575,7 +12385,7 @@ break;
 			case 'confes': case 'confess': case 'menfes': case 'menfess': {
 				if (m.isGroup) return XliconStickPrivate();
 				if (game.menfes[m.sender]) return replygcxlicon(`You're In Session ${command}!`)
-				if (!text) return replygcxlicon(`Example : ${prefix + command} 91xxxx|Fake name`)
+				if (!text) return replygcxlicon(`Example : ${prefix + command} 254xxxx|Fake name`)
 				let [teks1, teks2] = text.split`|`
 				if (!isNaN(teks1) && !teks1.startsWith('0') && teks1) {
 					const tujuan = teks1.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
@@ -14600,7 +12410,7 @@ break;
 					XliconBotInc.sendMessage(tujuan, { text: `_${command} connected_\n*Note :* if you want to end, type _*${prefix}del${command}*_` });
 					replygcxlicon(`_Start ${command}..._\n*Please start sending messages/media*\n*Duration ${command} only for 10 minutes*\n*Note :* if you want to end, type _*${prefix}del${command}*_`)
 				} else {
-					replygcxlicon(`Enter the number!\nExample : ${prefix + command} 91xxxx|Fake name`)
+					replygcxlicon(`Enter the number!\nExample : ${prefix + command} 254xxxx|Fake name`)
 				}
 			}
 			break
@@ -14779,7 +12589,7 @@ if (!text) return replygcxlicon('Where is the text?')
                 
                 
 			case 'ssweb': {
-				if (!text) return replygcxlicon(`Example: ${prefix + command} https://github.com/salmanytofficial`)
+				if (!text) return replygcxlicon(`Example: ${prefix + command} https://github.com/Samuel-Muli`)
 				if (!text.startsWith('http')) {
 					let buf = 'https://image.thum.io/get/width/1900/crop/1000/fullpage/https://' + q;
 					await XliconBotInc.sendMessage(m.chat, { image: { url: buf }, caption: 'Done' }, { quoted: m })
@@ -15085,14 +12895,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -15118,14 +12928,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -15136,7 +12946,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -15145,13 +12955,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -15860,14 +13670,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -15893,14 +13703,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -15911,7 +13721,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -15920,13 +13730,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16059,14 +13869,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16092,14 +13902,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16110,7 +13920,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16119,13 +13929,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16236,14 +14046,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16269,14 +14079,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16287,7 +14097,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16296,13 +14106,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16365,14 +14175,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16398,14 +14208,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16416,7 +14226,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16425,13 +14235,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16524,14 +14334,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16557,14 +14367,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16575,7 +14385,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16584,13 +14394,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16687,14 +14497,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16720,14 +14530,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16738,7 +14548,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16747,13 +14557,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16818,14 +14628,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -16851,14 +14661,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16869,7 +14679,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -16878,13 +14688,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -16994,14 +14804,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17027,14 +14837,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17045,7 +14855,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17054,13 +14864,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17121,14 +14931,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17154,14 +14964,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17172,7 +14982,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17181,13 +14991,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17246,14 +15056,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17279,14 +15089,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17297,7 +15107,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17306,13 +15116,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17383,14 +15193,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17416,14 +15226,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17434,7 +15244,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17443,13 +15253,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17516,14 +15326,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17549,14 +15359,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17567,7 +15377,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17576,13 +15386,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17701,14 +15511,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17734,14 +15544,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17752,7 +15562,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17761,13 +15571,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17827,14 +15637,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -17860,14 +15670,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -17878,7 +15688,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -17887,13 +15697,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18091,14 +15901,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18124,14 +15934,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18142,7 +15952,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18151,13 +15961,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18220,14 +16030,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18253,14 +16063,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18271,7 +16081,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18280,13 +16090,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18344,14 +16154,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18377,14 +16187,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18395,7 +16205,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18404,13 +16214,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18484,14 +16294,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18517,14 +16327,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18535,7 +16345,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18544,13 +16354,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18625,14 +16435,14 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v3') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh
   }, {
       quoted: m
   })
 } else if (typemenu === 'v4') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true
   }, {
@@ -18658,14 +16468,14 @@ if (typemenu === 'v1') {
   }, { quoted: m })
 } else if (typemenu === 'v6') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       gifPlayback: true,
       caption: xmenu_oh,
       contextInfo: {
           externalAdReply: {
               title: botname,
               body: ownername,
-              thumbnailUrl: 'https://ibb.co/G3Trfx5x.jpg',
+              thumbnailUrl: 'https://i.ibb.co/1fSPbQB3/1744607729963.jpg',
               sourceUrl: ``,
               mediaType: 1,
               renderLargerThumbnail: true
@@ -18676,7 +16486,7 @@ if (typemenu === 'v1') {
   })
 } else if (typemenu === 'v7') {
   XliconBotInc.sendMessage(m.chat, {
-      video: fs.readFileSync('./Karen/theme/Xlicon-Video.mp4'),
+      video: fs.readFileSync('./Karen/theme/Karen-Video.mp4'),
       caption: xmenu_oh,
       gifPlayback: true,
       contextInfo: {
@@ -18685,13 +16495,13 @@ if (typemenu === 'v1') {
           mentionedJid: [sender],
           forwardedNewsletterMessageInfo: {
               newsletterName: ownername,
-              newsletterJid: "120363232303807350@newsletter",
+              newsletterJid: "254705244235@s.whatsapp.net",
           },
           externalAdReply: {
               showAdAttribution: true,
               title: ownername,
               body: botname,
-              thumbnailUrl: "https://i.ibb.co/y0nLDSB/XLICON-IMG.jpg",
+              thumbnailUrl: "https://i.ibb.co/nMQTXDxn/1744607859449.jpg",
               sourceUrl: websitex,
               mediaType: 1,
               renderLargerThumbnail: true
