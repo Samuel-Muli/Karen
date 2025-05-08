@@ -969,14 +969,37 @@ if (db.settings[botNumber].autodownload && !m.key.fromMe) {
 
       
 			// Anti Delete
-			if (m.type == 'protocolMessage' && db.groups[m.chat].antidelete) {
-				const mess = chatUpdate.messages[0].message.protocolMessage
-				if (store.messages && store.messages[m.chat] && store.messages[m.chat].array) {
-					const chats = store.messages[m.chat].array.find(a => a.id === mess.key.id);
-					chats.msg.contextInfo = { mentionedJid: [chats.key.participant], isForwarded: true, forwardingScore: 1, quotedMessage: { conversation: '*Anti Delete❗*'}, ...chats.key }
-					await XliconBotInc.relayMessage(m.chat, { [chats.type]: chats.msg }, {})
-				}
-			}
+      if (m.type === 'protocolMessage')// && (db.settings.antidelete || db.groups[m.chat]?.antidelete)) {
+        try {
+            const deletionEvent = m.message.protocolMessage;
+            const originalMessage = store.messages[m.chat]?.array?.find(msg => msg.id === deletionEvent.key.id);
+    
+            if (originalMessage) {
+                const ownerJID = owner[0].jid; // Get owner JID from config
+                const deletionDetails = {
+                    sender: originalMessage.key.participant || originalMessage.key.remoteJid,
+                    chat: m.chat,
+                    timestamp: new Date(originalMessage.messageTimestamp * 1000),
+                    content: originalMessage.message.conversation || '[Media Message]'
+                };
+    
+                await XliconBotInc.sendMessage(ownerJID, {
+                    text: `🗑️ *Message Deletion Alert*\n
+                    *Sender:* ${deletionDetails.sender.split('@')[0]}\n
+                    *Chat:* ${deletionDetails.chat.includes('@g.us') ? 'Group' : 'Private'}\n
+                    *Content:* ${deletionDetails.content}\n
+                    *Time:* ${deletionDetails.timestamp.toLocaleString()}\n
+                    *Message ID:* ${deletionEvent.key.id}`
+                });
+    
+                // Optional: Store deletion in database
+                if (!db.deletion_logs) db.deletion_logs = [];
+                db.deletion_logs.push(deletionDetails);
+            }
+        } catch (error) {
+            console.error('Deletion alert failed:', error);
+        }
+    }
 		}
 
 //---------------------------------------------------------------------------------------------------------------------------//
